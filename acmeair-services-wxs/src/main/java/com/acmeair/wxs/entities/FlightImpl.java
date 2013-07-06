@@ -66,7 +66,7 @@ public class FlightImpl implements Serializable, Flight {
 	}
 	
 	@Override
-	public String getId()
+	public String geFlightId()
 	{
 		return id;
 	}

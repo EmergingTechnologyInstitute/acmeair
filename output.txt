@@ -1,0 +1,681 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] acmeair
+[INFO] acmeair-common
+[INFO] acmeair-services
+[INFO] acmeair-services-wxs
+[INFO] acmeair-loader
+[INFO] acmeair-services-astyanax
+[INFO] acmeair-webapp
+[INFO] acmeair-driver
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building acmeair 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ acmeair ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ acmeair ---
+[INFO] Installing C:\eclipse\git\RWacmeair\pom.xml to C:\Users\bondj\.m2\repository\com\acmeair\acmeair\1.0-SNAPSHOT\acmeair-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building acmeair-common 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ acmeair-common ---
+[INFO] Deleting C:\eclipse\git\RWacmeair\acmeair-common\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ acmeair-common ---
+[debug] execute contextualize
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\eclipse\git\RWacmeair\acmeair-common\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ acmeair-common ---
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 10 source files to C:\eclipse\git\RWacmeair\acmeair-common\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ acmeair-common ---
+[debug] execute contextualize
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\eclipse\git\RWacmeair\acmeair-common\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ acmeair-common ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ acmeair-common ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: C:\eclipse\git\RWacmeair\acmeair-common\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ acmeair-common ---
+[INFO] Building jar: C:\eclipse\git\RWacmeair\acmeair-common\target\acmeair-common-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ acmeair-common ---
+[INFO] Installing C:\eclipse\git\RWacmeair\acmeair-common\target\acmeair-common-1.0-SNAPSHOT.jar to C:\Users\bondj\.m2\repository\com\acmeair\acmeair-common\1.0-SNAPSHOT\acmeair-common-1.0-SNAPSHOT.jar
+[INFO] Installing C:\eclipse\git\RWacmeair\acmeair-common\pom.xml to C:\Users\bondj\.m2\repository\com\acmeair\acmeair-common\1.0-SNAPSHOT\acmeair-common-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building acmeair-services 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ acmeair-services ---
+[INFO] Deleting C:\eclipse\git\RWacmeair\acmeair-services\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ acmeair-services ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\eclipse\git\RWacmeair\acmeair-services\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ acmeair-services ---
+[INFO] Compiling 7 source files to C:\eclipse\git\RWacmeair\acmeair-services\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ acmeair-services ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\eclipse\git\RWacmeair\acmeair-services\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ acmeair-services ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ acmeair-services ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: C:\eclipse\git\RWacmeair\acmeair-services\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ acmeair-services ---
+[INFO] Building jar: C:\eclipse\git\RWacmeair\acmeair-services\target\acmeair-services-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ acmeair-services ---
+[INFO] Installing C:\eclipse\git\RWacmeair\acmeair-services\target\acmeair-services-1.0-SNAPSHOT.jar to C:\Users\bondj\.m2\repository\com\acmeair\acmeair-services\1.0-SNAPSHOT\acmeair-services-1.0-SNAPSHOT.jar
+[INFO] Installing C:\eclipse\git\RWacmeair\acmeair-services\pom.xml to C:\Users\bondj\.m2\repository\com\acmeair\acmeair-services\1.0-SNAPSHOT\acmeair-services-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building acmeair-services-wxs 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ acmeair-services-wxs ---
+[INFO] Deleting C:\eclipse\git\RWacmeair\acmeair-services-wxs\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ acmeair-services-wxs ---
+[debug] execute contextualize
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 4 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ acmeair-services-wxs ---
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 14 source files to C:\eclipse\git\RWacmeair\acmeair-services-wxs\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ acmeair-services-wxs ---
+[debug] execute contextualize
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\eclipse\git\RWacmeair\acmeair-services-wxs\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ acmeair-services-wxs ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ acmeair-services-wxs ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: C:\eclipse\git\RWacmeair\acmeair-services-wxs\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ acmeair-services-wxs ---
+[INFO] Building jar: C:\eclipse\git\RWacmeair\acmeair-services-wxs\target\acmeair-services-wxs-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ acmeair-services-wxs ---
+[INFO] Installing C:\eclipse\git\RWacmeair\acmeair-services-wxs\target\acmeair-services-wxs-1.0-SNAPSHOT.jar to C:\Users\bondj\.m2\repository\com\acmeair\acmeair-services-wxs\1.0-SNAPSHOT\acmeair-services-wxs-1.0-SNAPSHOT.jar
+[INFO] Installing C:\eclipse\git\RWacmeair\acmeair-services-wxs\pom.xml to C:\Users\bondj\.m2\repository\com\acmeair\acmeair-services-wxs\1.0-SNAPSHOT\acmeair-services-wxs-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building acmeair-loader 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ acmeair-loader ---
+[INFO] Deleting C:\eclipse\git\RWacmeair\acmeair-loader\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ acmeair-loader ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ acmeair-loader ---
+[INFO] Compiling 4 source files to C:\eclipse\git\RWacmeair\acmeair-loader\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ acmeair-loader ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\eclipse\git\RWacmeair\acmeair-loader\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ acmeair-loader ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ acmeair-loader ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: C:\eclipse\git\RWacmeair\acmeair-loader\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ acmeair-loader ---
+[INFO] Building jar: C:\eclipse\git\RWacmeair\acmeair-loader\target\acmeair-loader-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.3.1:install (default-install) @ acmeair-loader ---
+[INFO] Installing C:\eclipse\git\RWacmeair\acmeair-loader\target\acmeair-loader-1.0-SNAPSHOT.jar to C:\Users\bondj\.m2\repository\com\acmeair\acmeair-loader\1.0-SNAPSHOT\acmeair-loader-1.0-SNAPSHOT.jar
+[INFO] Installing C:\eclipse\git\RWacmeair\acmeair-loader\pom.xml to C:\Users\bondj\.m2\repository\com\acmeair\acmeair-loader\1.0-SNAPSHOT\acmeair-loader-1.0-SNAPSHOT.pom
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building acmeair-services-astyanax 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ acmeair-services-astyanax ---
+[INFO] Deleting C:\eclipse\git\RWacmeair\acmeair-services-astyanax\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ acmeair-services-astyanax ---
+[debug] execute contextualize
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ acmeair-services-astyanax ---
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 14 source files to C:\eclipse\git\RWacmeair\acmeair-services-astyanax\target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[21,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[22,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[23,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[28,1] error: cannot find symbol
+[ERROR]   symbol: class Entity
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\FlightServiceTest.java:[6,16] error: package org.junit does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[20,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[21,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[22,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[28,1] error: cannot find symbol
+[ERROR]   symbol: class Entity
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[4,39] error: package com.netflix.astyanax.entitystore does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[5,39] error: package com.netflix.astyanax.entitystore does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[3,27] error: package com.netflix.astyanax does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[4,27] error: package com.netflix.astyanax does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[5,42] error: package com.netflix.astyanax.connectionpool does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[6,47] error: package com.netflix.astyanax.connectionpool.impl does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[7,47] error: package com.netflix.astyanax.connectionpool.impl does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[8,32] error: package com.netflix.astyanax.impl does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[9,34] error: package com.netflix.astyanax.thrift does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[18,15] error: cannot find symbol
+[ERROR]   symbol:   class EntityManager
+  location: class EntityManagers
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[26,15] error: cannot find symbol
+[ERROR]   symbol:   class EntityManager
+  location: class EntityManagers
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[20,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[21,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[22,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[29,1] error: cannot find symbol
+[ERROR]   symbol: class Entity
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[34,15] error: cannot find symbol
+[ERROR]   symbol:   class EntityManager
+  location: class EntityManagers
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[20,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[21,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[22,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[26,1] error: cannot find symbol
+[ERROR]   symbol: class Entity
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[42,15] error: cannot find symbol
+[ERROR]   symbol:   class EntityManager
+  location: class EntityManagers
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\AirportCodeMappingImpl.java:[18,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\AirportCodeMappingImpl.java:[19,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\AirportCodeMappingImpl.java:[20,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\AirportCodeMappingImpl.java:[24,1] error: cannot find symbol
+[ERROR]   symbol: class Entity
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[51,15] error: cannot find symbol
+[ERROR]   symbol:   class EntityManager
+  location: class EntityManagers
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[18,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[19,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[20,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[24,1] error: cannot find symbol
+[ERROR]   symbol: class Entity
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[59,15] error: cannot find symbol
+[ERROR]   symbol:   class EntityManager
+  location: class EntityManagers
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[13,22] error: cannot find symbol
+[ERROR]   symbol:   class AstyanaxContext
+  location: class AstyanaxContextHelper
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[13,38] error: cannot find symbol
+[ERROR]   symbol:   class Keyspace
+  location: class AstyanaxContextHelper
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[32,8] error: cannot find symbol
+[ERROR]   symbol:   class Keyspace
+  location: class AstyanaxContextHelper
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\CustomerServiceImpl.java:[36,39] error: package com.netflix.astyanax.entitystore does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\FlightServiceImpl.java:[37,39] error: package com.netflix.astyanax.entitystore does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\BookingServiceImpl.java:[31,39] error: package com.netflix.astyanax.entitystore does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\BookingServiceTest.java:[3,23] error: package org.junit does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\BookingServiceTest.java:[7,16] error: package org.junit does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[31,2] error: cannot find symbol
+[ERROR]   symbol:   class Id
+  location: class FlightImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[34,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class FlightImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[37,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class FlightImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[40,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class FlightImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[43,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class FlightImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[46,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class FlightImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[49,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class FlightImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[52,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class FlightImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[55,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class FlightImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\FlightServiceTest.java:[18,2] error: cannot find symbol
+[ERROR]   symbol:   class Test
+  location: class FlightServiceTest
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\FlightServiceTest.java:[24,2] error: cannot find symbol
+[ERROR]   symbol:   class Test
+  location: class FlightServiceTest
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\FlightServiceTest.java:[30,2] error: cannot find symbol
+[ERROR]   symbol:   class Test
+  location: class FlightServiceTest
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\FlightServiceTest.java:[44,2] error: cannot find symbol
+[ERROR]   symbol:   class Test
+  location: class FlightServiceTest
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\FlightServiceTest.java:[53,2] error: cannot find symbol
+[ERROR]   symbol:   class Test
+  location: class FlightServiceTest
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[31,2] error: cannot find symbol
+[ERROR]   symbol:   class Id
+  location: class BookingImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[34,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class BookingImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[37,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class BookingImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[40,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class BookingImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[43,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class BookingImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[46,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class BookingImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[38,2] error: cannot find symbol
+[ERROR]   symbol:   class Id
+  location: class CustomerImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[41,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class CustomerImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[44,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class CustomerImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[47,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class CustomerImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[50,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class CustomerImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[53,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class CustomerImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[56,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class CustomerImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[59,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class CustomerImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[29,2] error: cannot find symbol
+[ERROR]   symbol:   class Id
+  location: class CustomerSessionImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[32,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class CustomerSessionImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[35,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class CustomerSessionImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[38,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class CustomerSessionImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\AirportCodeMappingImpl.java:[27,2] error: cannot find symbol
+[ERROR]   symbol:   class Id
+  location: class AirportCodeMappingImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\AirportCodeMappingImpl.java:[30,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class AirportCodeMappingImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[27,2] error: cannot find symbol
+[ERROR]   symbol:   class Id
+  location: class FlightSegmentImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[30,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class FlightSegmentImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[33,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class FlightSegmentImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[36,2] error: cannot find symbol
+[ERROR]   symbol:   class Column
+  location: class FlightSegmentImpl
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\BookingServiceTest.java:[16,2] error: cannot find symbol
+[ERROR]   symbol:   class Test
+  location: class BookingServiceTest
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\BookingServiceTest.java:[27,2] error: cannot find symbol
+[ERROR]   symbol:   class Test
+  location: class BookingServiceTest
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\BookingServiceTest.java:[37,2] error: cannot find symbol
+[ERROR]   symbol:   class Test
+  location: class BookingServiceTest
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\BookingServiceTest.java:[49,2] error: cannot find symbol
+[ERROR]   symbol:   class Test
+  location: class BookingServiceTest
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[19,2] error: cannot find symbol
+[ERROR]   symbol:   class EntityManager
+  location: class EntityManagers
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[19,79] error: package DefaultEntityManager does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[27,2] error: cannot find symbol
+[ERROR]   symbol:   class EntityManager
+  location: class EntityManagers
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[27,80] error: package DefaultEntityManager does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[35,2] error: cannot find symbol
+[ERROR]   symbol:   class EntityManager
+  location: class EntityManagers
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[35,87] error: package DefaultEntityManager does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[43,2] error: cannot find symbol
+[ERROR]   symbol:   class EntityManager
+  location: class EntityManagers
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[43,90] error: package DefaultEntityManager does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[52,2] error: cannot find symbol
+[ERROR]   symbol:   class EntityManager
+  location: class EntityManagers
+C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[52,85] error: package DefaultEntityManager does not exist
+[INFO] 100 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] acmeair ........................................... SUCCESS [0.387s]
+[INFO] acmeair-common .................................... SUCCESS [1.562s]
+[INFO] acmeair-services .................................. SUCCESS [0.310s]
+[INFO] acmeair-services-wxs .............................. SUCCESS [1.344s]
+[INFO] acmeair-loader .................................... SUCCESS [0.439s]
+[INFO] acmeair-services-astyanax ......................... FAILURE [0.250s]
+[INFO] acmeair-webapp .................................... SKIPPED
+[INFO] acmeair-driver .................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 4.446s
+[INFO] Finished at: Sat Jul 06 15:23:55 BST 2013
+[INFO] Final Memory: 19M/434M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:2.5.1:compile (default-compile) on project acmeair-services-astyanax: Compilation failure: Compilation failure:
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[21,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[22,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[23,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[28,1] error: cannot find symbol
+[ERROR] symbol: class Entity
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\FlightServiceTest.java:[6,16] error: package org.junit does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[20,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[21,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[22,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[28,1] error: cannot find symbol
+[ERROR] symbol: class Entity
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[4,39] error: package com.netflix.astyanax.entitystore does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[5,39] error: package com.netflix.astyanax.entitystore does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[3,27] error: package com.netflix.astyanax does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[4,27] error: package com.netflix.astyanax does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[5,42] error: package com.netflix.astyanax.connectionpool does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[6,47] error: package com.netflix.astyanax.connectionpool.impl does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[7,47] error: package com.netflix.astyanax.connectionpool.impl does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[8,32] error: package com.netflix.astyanax.impl does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[9,34] error: package com.netflix.astyanax.thrift does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[18,15] error: cannot find symbol
+[ERROR] symbol:   class EntityManager
+[ERROR] location: class EntityManagers
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[26,15] error: cannot find symbol
+[ERROR] symbol:   class EntityManager
+[ERROR] location: class EntityManagers
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[20,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[21,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[22,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[29,1] error: cannot find symbol
+[ERROR] symbol: class Entity
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[34,15] error: cannot find symbol
+[ERROR] symbol:   class EntityManager
+[ERROR] location: class EntityManagers
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[20,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[21,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[22,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[26,1] error: cannot find symbol
+[ERROR] symbol: class Entity
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[42,15] error: cannot find symbol
+[ERROR] symbol:   class EntityManager
+[ERROR] location: class EntityManagers
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\AirportCodeMappingImpl.java:[18,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\AirportCodeMappingImpl.java:[19,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\AirportCodeMappingImpl.java:[20,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\AirportCodeMappingImpl.java:[24,1] error: cannot find symbol
+[ERROR] symbol: class Entity
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[51,15] error: cannot find symbol
+[ERROR] symbol:   class EntityManager
+[ERROR] location: class EntityManagers
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[18,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[19,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[20,24] error: package javax.persistence does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[24,1] error: cannot find symbol
+[ERROR] symbol: class Entity
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[59,15] error: cannot find symbol
+[ERROR] symbol:   class EntityManager
+[ERROR] location: class EntityManagers
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[13,22] error: cannot find symbol
+[ERROR] symbol:   class AstyanaxContext
+[ERROR] location: class AstyanaxContextHelper
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[13,38] error: cannot find symbol
+[ERROR] symbol:   class Keyspace
+[ERROR] location: class AstyanaxContextHelper
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\AstyanaxContextHelper.java:[32,8] error: cannot find symbol
+[ERROR] symbol:   class Keyspace
+[ERROR] location: class AstyanaxContextHelper
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\CustomerServiceImpl.java:[36,39] error: package com.netflix.astyanax.entitystore does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\FlightServiceImpl.java:[37,39] error: package com.netflix.astyanax.entitystore does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\BookingServiceImpl.java:[31,39] error: package com.netflix.astyanax.entitystore does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\BookingServiceTest.java:[3,23] error: package org.junit does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\BookingServiceTest.java:[7,16] error: package org.junit does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[31,2] error: cannot find symbol
+[ERROR] symbol:   class Id
+[ERROR] location: class FlightImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[34,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class FlightImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[37,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class FlightImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[40,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class FlightImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[43,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class FlightImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[46,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class FlightImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[49,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class FlightImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[52,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class FlightImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightImpl.java:[55,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class FlightImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\FlightServiceTest.java:[18,2] error: cannot find symbol
+[ERROR] symbol:   class Test
+[ERROR] location: class FlightServiceTest
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\FlightServiceTest.java:[24,2] error: cannot find symbol
+[ERROR] symbol:   class Test
+[ERROR] location: class FlightServiceTest
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\FlightServiceTest.java:[30,2] error: cannot find symbol
+[ERROR] symbol:   class Test
+[ERROR] location: class FlightServiceTest
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\FlightServiceTest.java:[44,2] error: cannot find symbol
+[ERROR] symbol:   class Test
+[ERROR] location: class FlightServiceTest
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\FlightServiceTest.java:[53,2] error: cannot find symbol
+[ERROR] symbol:   class Test
+[ERROR] location: class FlightServiceTest
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[31,2] error: cannot find symbol
+[ERROR] symbol:   class Id
+[ERROR] location: class BookingImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[34,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class BookingImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[37,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class BookingImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[40,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class BookingImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[43,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class BookingImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\BookingImpl.java:[46,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class BookingImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[38,2] error: cannot find symbol
+[ERROR] symbol:   class Id
+[ERROR] location: class CustomerImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[41,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class CustomerImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[44,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class CustomerImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[47,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class CustomerImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[50,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class CustomerImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[53,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class CustomerImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[56,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class CustomerImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerImpl.java:[59,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class CustomerImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[29,2] error: cannot find symbol
+[ERROR] symbol:   class Id
+[ERROR] location: class CustomerSessionImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[32,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class CustomerSessionImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[35,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class CustomerSessionImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\CustomerSessionImpl.java:[38,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class CustomerSessionImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\AirportCodeMappingImpl.java:[27,2] error: cannot find symbol
+[ERROR] symbol:   class Id
+[ERROR] location: class AirportCodeMappingImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\AirportCodeMappingImpl.java:[30,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class AirportCodeMappingImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[27,2] error: cannot find symbol
+[ERROR] symbol:   class Id
+[ERROR] location: class FlightSegmentImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[30,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class FlightSegmentImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[33,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class FlightSegmentImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\FlightSegmentImpl.java:[36,2] error: cannot find symbol
+[ERROR] symbol:   class Column
+[ERROR] location: class FlightSegmentImpl
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\BookingServiceTest.java:[16,2] error: cannot find symbol
+[ERROR] symbol:   class Test
+[ERROR] location: class BookingServiceTest
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\BookingServiceTest.java:[27,2] error: cannot find symbol
+[ERROR] symbol:   class Test
+[ERROR] location: class BookingServiceTest
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\BookingServiceTest.java:[37,2] error: cannot find symbol
+[ERROR] symbol:   class Test
+[ERROR] location: class BookingServiceTest
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\service\test\BookingServiceTest.java:[49,2] error: cannot find symbol
+[ERROR] symbol:   class Test
+[ERROR] location: class BookingServiceTest
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[19,2] error: cannot find symbol
+[ERROR] symbol:   class EntityManager
+[ERROR] location: class EntityManagers
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[19,79] error: package DefaultEntityManager does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[27,2] error: cannot find symbol
+[ERROR] symbol:   class EntityManager
+[ERROR] location: class EntityManagers
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[27,80] error: package DefaultEntityManager does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[35,2] error: cannot find symbol
+[ERROR] symbol:   class EntityManager
+[ERROR] location: class EntityManagers
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[35,87] error: package DefaultEntityManager does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[43,2] error: cannot find symbol
+[ERROR] symbol:   class EntityManager
+[ERROR] location: class EntityManagers
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[43,90] error: package DefaultEntityManager does not exist
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[52,2] error: cannot find symbol
+[ERROR] symbol:   class EntityManager
+[ERROR] location: class EntityManagers
+[ERROR] C:\eclipse\git\RWacmeair\acmeair-services-astyanax\src\main\java\com\acmeair\astyanax\entities\EntityManagers.java:[52,85] error: package DefaultEntityManager does not exist
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :acmeair-services-astyanax

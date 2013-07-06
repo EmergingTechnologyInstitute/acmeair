@@ -165,7 +165,7 @@ public class FlightImpl implements Flight {
 	}
 
 	@Override
-	public String getId() {
+	public String geFlightId() {
 		return id;
 	}
 

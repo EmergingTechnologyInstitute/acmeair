@@ -21,19 +21,9 @@ import java.util.List;
 import com.acmeair.entities.Flight;
 
 public interface FlightService {
-
-	//public abstract Flight<K> getFlightByFlightKey(K key);
 	
 	public abstract List<? extends Flight> getFlightByAirportsAndDepartureDate(String fromAirport, String toAirport, Date deptDate); 
 
 	public abstract List<? extends Flight> getFlightByAirports(String fromAirport, String toAirport);  	
-
-	/*;*/
-
-	//
-	
-	//
-	//public abstract AirportCodeMapping newAirportMapping();
-	//*/
 
 }

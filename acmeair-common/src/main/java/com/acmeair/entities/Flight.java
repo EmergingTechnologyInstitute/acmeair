@@ -20,7 +20,7 @@ import java.util.Date;
 
 public interface Flight {
 
-	String getId();
+	String geFlightId();
 
 	String getFlightSegmentId();
 

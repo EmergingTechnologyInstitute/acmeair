@@ -1,0 +1,43 @@
+CREATE KEYSPACE acmeair WITH
+placement_strategy = 'SimpleStrategy'
+AND strategy_options = {replication_factor:2};
+
+DROP COLUMN FAMILY flightservice;
+
+CREATE COLUMN FAMILY flight_segment
+WITH comparator = UTF8Type
+AND key_validation_class=UTF8Type
+AND column_metadata = [
+{column_name: originPort, validation_class: UTF8Type, index_type: KEYS}
+{column_name: destPort, validation_class: UTF8Type, index_type: KEYS}
+];
+
+CREATE COLUMN FAMILY airport_code_mapping
+WITH comparator = UTF8Type
+AND key_validation_class=UTF8Type
+AND column_metadata = [
+{column_name: airport_name, validation_class: UTF8Type}
+];
+
+CREATE COLUMN FAMILY flight
+WITH comparator = UTF8Type
+AND key_validation_class=UTF8Type
+AND column_metadata = [
+{column_name: flightSegmentId, validation_class: UTF8Type, index_type: KEYS}
+{column_name: scheduledDepartureDate, validation_class: DateType, index_type: KEYS}
+];
+
+CREATE COLUMN FAMILY customer
+WITH comparator = UTF8Type
+AND key_validation_class=UTF8Type;
+
+CREATE COLUMN FAMILY customer_session
+WITH comparator = UTF8Type
+AND key_validation_class=UTF8Type;
+
+CREATE COLUMN FAMILY booking
+WITH comparator = UTF8Type
+AND key_validation_class=UTF8Type
+AND column_metadata = [
+{column_name: userid, validation_class: UTF8Type, index_type: KEYS}
+];

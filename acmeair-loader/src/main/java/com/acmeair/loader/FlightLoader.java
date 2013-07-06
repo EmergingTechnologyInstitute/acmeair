@@ -18,16 +18,19 @@ package com.acmeair.loader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
-import java.util.*;
-import java.math.*;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.StringTokenizer;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Component;
+
 import com.acmeair.entities.AirportCodeMapping;
 import com.acmeair.entities.FlightSegment;
-import com.acmeair.service.FlightService;
-
-import org.springframework.stereotype.Component;
+import com.acmeair.service.FlightServiceLoader;
 
 @Component
 public class FlightLoader {
@@ -35,7 +38,7 @@ public class FlightLoader {
 	private static final int MAX_FLIGHTS_PER_SEGMENT = 30;
 	
 	@Resource
-	private FlightService flightService;
+	private FlightServiceLoader flightService;
 	
 	public void loadFlights() throws Exception {
 		InputStream csvInputStream = FlightLoader.class.getResourceAsStream("/mileage.csv");
@@ -47,7 +50,7 @@ public class FlightLoader {
 		
 		// read the first line which are airport names
 		while (st.hasMoreTokens()) {
-			AirportCodeMapping acm = new AirportCodeMapping();
+			AirportCodeMapping acm = flightService.newAirportMapping(null, null);
 			acm.setAirportName(st.nextToken());
 			airports.add(acm);
 		}
@@ -73,9 +76,7 @@ public class FlightLoader {
 			String airportName = st.nextToken();
 			String airportCode = st.nextToken();
 			if (!alreadyInCollection(airportCode, airports)) {
-				AirportCodeMapping acm = new AirportCodeMapping();
-				acm.setAirportName(airportName);
-				acm.setAirportCode(airportCode);
+				AirportCodeMapping acm = flightService.newAirportMapping(airportName,airportCode);				
 				airports.add(acm);
 			}
 			int indexIntoTopLine = 0;
@@ -88,7 +89,7 @@ public class FlightLoader {
 				int miles = Integer.parseInt(milesString);
 				String toAirport = airports.get(indexIntoTopLine).getAirportCode();
 				String flightId = "AA" + flightNumber;
-				FlightSegment flightSeg = new FlightSegment(flightId, airportCode, toAirport, miles);
+				FlightSegment flightSeg = flightService.newFlightSegment(flightId, airportCode, toAirport, miles);
 				flightService.storeFlightSegment(flightSeg);
 				Date now = new Date();
 				for (int daysFromNow = 0; daysFromNow < MAX_FLIGHTS_PER_SEGMENT; daysFromNow++) {
@@ -134,5 +135,11 @@ public class FlightLoader {
 			}
 		}
 		return false;
+	}
+	
+	public static void main(String []args) throws Exception
+	{
+		FlightLoader loader = new FlightLoader();
+		loader.loadFlights();
 	}
 }

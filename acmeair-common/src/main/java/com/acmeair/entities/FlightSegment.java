@@ -15,94 +15,23 @@
 *******************************************************************************/
 package com.acmeair.entities;
 
-import java.io.Serializable;
 
-public class FlightSegment implements Serializable{
-
-	private static final long serialVersionUID = 1L;
-
-	private String id;
-	private String originPort;
-	private String destPort;
-	private int miles;
-
-	public FlightSegment() {
-	}
+public interface FlightSegment {
 	
-	public FlightSegment(String flightName, String origPort, String destPort, int miles) {
-		this.id = flightName;
-		this.originPort = origPort;
-		this.destPort = destPort;
-		this.miles = miles;
-	}
-	
-	public String getFlightName() {
-		return id;
-	}
+	String getId();
 
-	public void setFlightName(String flightName) {
-		this.id = flightName;
-	}
+	void setId(String id);
 
-	public String getOriginPort() {
-		return originPort;
-	}
+	String getOriginPort();
 
-	public void setOriginPort(String originPort) {
-		this.originPort = originPort;
-	}
+	void setOriginPort(String originPort);
 
-	public String getDestPort() {
-		return destPort;
-	}
+	String getDestPort();
 
-	public void setDestPort(String destPort) {
-		this.destPort = destPort;
-	}
+	void setDestPort(String destPort);
 
-	public int getMiles() {
-		return miles;
-	}
+	int getMiles();
 
-	public void setMiles(int miles) {
-		this.miles = miles;
-	}
-
-	@Override
-	public String toString() {
-		StringBuffer sb = new StringBuffer();
-		sb.append("FlightSegment ").append(id).append(" originating from:\"").append(originPort).append("\" arriving at:\"").append(destPort).append("\"");
-		return sb.toString();
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		FlightSegment other = (FlightSegment) obj;
-		if (destPort == null) {
-			if (other.destPort != null)
-				return false;
-		} else if (!destPort.equals(other.destPort))
-			return false;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		if (miles != other.miles)
-			return false;
-		if (originPort == null) {
-			if (other.originPort != null)
-				return false;
-		} else if (!originPort.equals(other.originPort))
-			return false;
-		return true;
-	}
-	
-	
+	void setMiles(int miles);
+		
 }

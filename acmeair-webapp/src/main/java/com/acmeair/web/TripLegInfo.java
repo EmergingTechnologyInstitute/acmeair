@@ -34,7 +34,7 @@ public class TripLegInfo {
 	private int pageSize;
 	private int currentPage;
 	
-	private List<Flight> flightsOptions;
+	private List<? extends Flight> flightsOptions;
 
 	public boolean isHasMoreOptions() {
 		return hasMoreOptions;
@@ -68,11 +68,18 @@ public class TripLegInfo {
 		this.currentPage = currentPage;
 	}
 
-	public List<Flight> getFlightsOptions() {
+	public List<? extends Flight> getFlightsOptions() {
 		return flightsOptions;
 	}
 
-	public void setFlightsOptions(List<Flight> flightsOptions) {
+	public void setFlightsOptions(List<? extends Flight> flightsOptions) {
 		this.flightsOptions = flightsOptions;
+	}
+
+	@Override
+	public String toString() {
+		return "TripLegInfo [hasMoreOptions=" + hasMoreOptions + ", numPages="
+				+ numPages + ", pageSize=" + pageSize + ", currentPage="
+				+ currentPage + ", flightsOptions=" + flightsOptions + "]";
 	}
 }

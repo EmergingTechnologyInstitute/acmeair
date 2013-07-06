@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry including="**/*.java" kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/astyanax-queue"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/astyanax-core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/astyanax-entity-mapper"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/astyanax"/>
 	<classpathentry kind="src" path="/acmeair-common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/astyanax-cassandra"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/astyanax-thrift"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/astyanax-examples"/>
 	<classpathentry kind="var" path="M2_REPO/com/ibm/websphere/objectgrid/objectgrid/8.6.0.1/objectgrid-8.6.0.1.jar"/>
 	<classpathentry kind="var" path="M2_REPO/ch/qos/logback/logback-classic/1.0.6/logback-classic-1.0.6.jar"/>
 	<classpathentry kind="var" path="M2_REPO/ch/qos/logback/logback-core/1.0.6/logback-core-1.0.6.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.6.5/slf4j-api-1.6.5.jar"/>
 	<classpathentry kind="src" path="/acmeair-services"/>
-	<classpathentry kind="src" path="/acmeair-services-wxs"/>
 	<classpathentry kind="var" path="M2_REPO/com/google/guava/guava/12.0/guava-12.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-context/3.1.2.RELEASE/spring-context-3.1.2.RELEASE.jar"/>
@@ -25,7 +32,10 @@
 	<classpathentry kind="var" path="M2_REPO/org/aspectj/aspectjrt/1.6.8/aspectjrt-1.6.8.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/aspectj/aspectjweaver/1.6.8/aspectjweaver-1.6.8.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/apache/geronimo/specs/geronimo-jaxrs_1.1_spec/1.0/geronimo-jaxrs_1.1_spec-1.0.jar"/>
-	<classpathentry kind="var" path="M2_REPO/javax/javaee-web-api/6.0/javaee-web-api-6.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/acmeair-services-astyanax"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/astyanax-recipes"/>
+	<classpathentry kind="var" path="M2_REPO/javax/javaee-web-api/6.0/javaee-web-api-6.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

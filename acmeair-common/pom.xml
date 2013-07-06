@@ -25,11 +25,4 @@
   <packaging>jar</packaging>
   <name>acmeair-common</name>
   <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>com.ibm.websphere.objectgrid</groupId>
-      <artifactId>objectgrid</artifactId>
-      <version>${objectgrid.version}</version>
-    </dependency>
-  </dependencies>
 </project>

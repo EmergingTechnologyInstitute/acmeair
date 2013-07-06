@@ -51,4 +51,12 @@ public class TripFlightOptions {
 	public void setTripFlights(List<TripLegInfo> tripFlights) {
 		this.tripFlights = tripFlights;
 	}
+
+	@Override
+	public String toString() {
+		return "TripFlightOptions [tripLegs=" + tripLegs + ", tripFlights="
+				+ tripFlights + "]";
+	}
+	
+	
 }

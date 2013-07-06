@@ -15,28 +15,25 @@
 *******************************************************************************/
 package com.acmeair.service;
 
-import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-import com.acmeair.entities.*;
+import com.acmeair.entities.Flight;
 
 public interface FlightService {
 
-	public abstract Flight getFlightByFlightKey(FlightPK key);
+	//public abstract Flight<K> getFlightByFlightKey(K key);
 	
-	public abstract List<Flight> getFlightByAirportsAndDepartureDate(String fromAirport, String toAirport, Date deptDate); 
+	public abstract List<? extends Flight> getFlightByAirportsAndDepartureDate(String fromAirport, String toAirport, Date deptDate); 
 
-	public abstract List<Flight> getFlightByAirports(String fromAirport, String toAirport);  
+	public abstract List<? extends Flight> getFlightByAirports(String fromAirport, String toAirport);  	
+
+	/*;*/
+
+	//
 	
-	public abstract void storeAirportMapping(AirportCodeMapping mapping);
-
-	public abstract Flight createNewFlight(String flightSegmentId,
-			Date scheduledDepartureTime, Date scheduledArrivalTime,
-			BigDecimal firstClassBaseCost, BigDecimal economyClassBaseCost,
-			int numFirstClassSeats, int numEconomyClassSeats,
-			String airplaneTypeId);
-
-	public abstract void storeFlightSegment(FlightSegment flightSeg);
+	//
+	//public abstract AirportCodeMapping newAirportMapping();
+	//*/
 
 }

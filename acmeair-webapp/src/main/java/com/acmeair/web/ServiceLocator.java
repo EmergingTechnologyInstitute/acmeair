@@ -1,18 +1,18 @@
 /*******************************************************************************
-* Copyright (c) 2013 IBM Corp.
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*    http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*******************************************************************************/
+ * Copyright (c) 2013 IBM Corp.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *******************************************************************************/
 package com.acmeair.web;
 
 import java.util.concurrent.atomic.AtomicReference;
@@ -24,13 +24,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.acmeair.web.config.AstyanaxDirectAppConfig;
 import com.acmeair.web.config.WXSDirectAppConfig;
 
 public class ServiceLocator {
 
 	public static String REPOSITORY_LOOKUP_KEY = "com.acmeair.repository.type";
 	final ApplicationContext ctx;
-	private static Logger logger = LoggerFactory.getLogger(ServiceLocator.class);
+	private static Logger logger = LoggerFactory
+			.getLogger(ServiceLocator.class);
 
 	private static AtomicReference<ServiceLocator> singletonServiceLocator = new AtomicReference<ServiceLocator>();
 
@@ -58,11 +60,10 @@ public class ServiceLocator {
 		} catch (NamingException e) {
 			// e.printStackTrace();
 		}
-		
+
 		if (type != null) {
 			logger.info("Found repository in web.xml:" + type);
-		}
-		else if (context != null) {
+		} else if (context != null) {
 			try {
 				type = (String) context.lookup(lookup);
 				if (type != null)
@@ -79,14 +80,29 @@ public class ServiceLocator {
 			else {
 				type = System.getenv(REPOSITORY_LOOKUP_KEY);
 				if (type != null)
-					logger.info("Found repository in environment property:" + type);
+					logger.info("Found repository in environment property:"
+							+ type);
 			}
 		}
 
-		// TODO:  Later add back in other implementations
-		type = "wxsdirect";
-		logger.info("Using default repository :" + type);
-		ctx = new AnnotationConfigApplicationContext(WXSDirectAppConfig.class);
+		@SuppressWarnings("rawtypes")
+		Class clazz;
+
+		if (type == null)
+			type = "astyanax";
+
+		switch (type) {
+		case "astyanax":
+			clazz = AstyanaxDirectAppConfig.class;
+			break;
+		case "wxs":
+			clazz = WXSDirectAppConfig.class;
+			break;
+		default:
+			clazz = WXSDirectAppConfig.class;
+			break;
+		}
+		ctx = new AnnotationConfigApplicationContext(clazz);
 	}
 
 	public static <T> T getService(Class<T> clazz) {

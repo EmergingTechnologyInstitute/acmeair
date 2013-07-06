@@ -13,22 +13,23 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 *******************************************************************************/
-package com.acmeair.entities;
+package com.acmeair.wxs.entities;
 
 import java.io.Serializable;
+
 import com.ibm.websphere.objectgrid.plugins.PartitionableKey;
 
-public class BookingPK implements Serializable, PartitionableKey{
+public class BookingPartitionableKey implements Serializable, PartitionableKey{
 	
 	private static final long serialVersionUID = 1L;
 	private String id;
 	private String customerId;
 	
-	public BookingPK() {
+	public BookingPartitionableKey() {
 		super();
 	}
 
-	public BookingPK(String customerId,String id) {
+	public BookingPartitionableKey(String customerId,String id) {
 		super();
 		this.id = id;
 		this.customerId = customerId;
@@ -49,10 +50,10 @@ public class BookingPK implements Serializable, PartitionableKey{
 	public void setCustomerId(String customerId) {
 		this.customerId = customerId;
 	}
-
+	
 	@Override
 	public Object ibmGetPartition() {
-		return this.customerId;
+		return this.getCustomerId();
 	}
 
 	@Override
@@ -73,7 +74,7 @@ public class BookingPK implements Serializable, PartitionableKey{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		BookingPK other = (BookingPK) obj;
+		BookingPartitionableKey other = (BookingPartitionableKey) obj;
 		if (customerId == null) {
 			if (other.customerId != null)
 				return false;

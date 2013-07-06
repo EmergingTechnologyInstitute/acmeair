@@ -13,23 +13,24 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 *******************************************************************************/
-package com.acmeair.entities;
+package com.acmeair.wxs.entities;
 
 import java.io.Serializable;
+
 import com.ibm.websphere.objectgrid.plugins.PartitionableKey;
 
-public class FlightPK implements Serializable,PartitionableKey{
+public class FlightPartitionableKey implements Serializable,PartitionableKey{
 	
 	private static final long serialVersionUID = 1L;
 	
 	private String id;
 	private String flightSegmentId;
 	
-	public FlightPK() {
+	public FlightPartitionableKey() {
 		super();
 	}
 
-	public FlightPK(String flightSegmentId,String id) {
+	public FlightPartitionableKey(String flightSegmentId,String id) {
 		super();
 		this.id = id;
 		this.flightSegmentId = flightSegmentId;
@@ -48,10 +49,9 @@ public class FlightPK implements Serializable,PartitionableKey{
 		this.flightSegmentId = flightSegmentId;
 	}
 	
-	
 	@Override
 	public Object ibmGetPartition() {
-		return this.flightSegmentId;
+		return this.getFlightSegmentId();
 	}
 
 	@Override
@@ -71,7 +71,7 @@ public class FlightPK implements Serializable,PartitionableKey{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		FlightPK other = (FlightPK) obj;
+		FlightPartitionableKey other = (FlightPartitionableKey) obj;
 		if (flightSegmentId == null) {
 			if (other.flightSegmentId != null)
 				return false;

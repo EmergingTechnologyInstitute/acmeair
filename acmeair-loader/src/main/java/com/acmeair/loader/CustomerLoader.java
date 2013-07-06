@@ -15,25 +15,32 @@
 *******************************************************************************/
 package com.acmeair.loader;
 
-import com.acmeair.entities.Customer;
-import com.acmeair.entities.CustomerAddress;
-import com.acmeair.entities.Customer.PhoneType;
-import com.acmeair.service.CustomerService;
+import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
-import javax.annotation.Resource;
+
+import com.acmeair.entities.CustomerAddress;
+import com.acmeair.entities.impl.MemberShipStatus;
+import com.acmeair.entities.impl.PhoneType;
+import com.acmeair.service.CustomerServiceLoader;
 
 @Component
 public class CustomerLoader {
 
 	@Resource
-	private CustomerService customerService;
+	private CustomerServiceLoader customerService;
 
 	public void loadCustomers(long numCustomers) {
 		CustomerAddress address = new CustomerAddress("123 Main St.", null, "Anytown", "NC", "USA", "27617");
 		for (long ii = 0; ii < numCustomers; ii++) {
-			customerService.createCustomer("uid"+ii+"@email.com", "password", Customer.MemberShipStatus.GOLD, 1000000, 1000, "919-123-4567", PhoneType.BUSINESS, address);
+			customerService.createCustomer("uid"+ii+"@email.com", "password",MemberShipStatus.GOLD, 1000000, 1000, "919-123-4567", PhoneType.BUSINESS, address);
 		}
+	}
+	
+	public static void main(String[]args)
+	{
+		CustomerLoader loader = new CustomerLoader();
+		loader.loadCustomers(200);
 	}
 
 }

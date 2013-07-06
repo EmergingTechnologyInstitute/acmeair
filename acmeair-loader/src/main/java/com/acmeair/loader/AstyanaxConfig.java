@@ -13,10 +13,12 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 *******************************************************************************/
-package com.acmeair.wxs.utils;
+package com.acmeair.loader;
 
-public interface TransactionService {
-	
-	void prepareForTransaction() throws Exception;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
+@ComponentScan(basePackages={"com.acmeair.astyanax.service", "com.acmeair.loader"})
+public class AstyanaxConfig {
 }

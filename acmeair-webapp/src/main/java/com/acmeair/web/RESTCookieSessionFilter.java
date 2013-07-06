@@ -29,7 +29,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.acmeair.entities.CustomerSession;
 import com.acmeair.service.CustomerService;
-import com.acmeair.wxs.utils.TransactionService;
+import com.acmeair.service.TransactionService;
 
 public class RESTCookieSessionFilter implements Filter {
 	

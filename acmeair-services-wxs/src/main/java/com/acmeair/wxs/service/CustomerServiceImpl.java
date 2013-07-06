@@ -24,12 +24,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.acmeair.entities.Customer;
-import com.acmeair.entities.Customer.MemberShipStatus;
-import com.acmeair.entities.Customer.PhoneType;
 import com.acmeair.entities.CustomerAddress;
 import com.acmeair.entities.CustomerSession;
+import com.acmeair.entities.impl.MemberShipStatus;
+import com.acmeair.entities.impl.PhoneType;
 import com.acmeair.service.CustomerService;
 import com.acmeair.service.KeyGenerator;
+import com.acmeair.wxs.entities.CustomerImpl;
+import com.acmeair.wxs.entities.CustomerSessionImpl;
 import com.acmeair.wxs.utils.WXSSessionManager;
 import com.ibm.websphere.objectgrid.ObjectMap;
 import com.ibm.websphere.objectgrid.Session;
@@ -50,12 +52,12 @@ public class CustomerServiceImpl implements CustomerService{
 	KeyGenerator keyGenerator;
 
 	@Override
-	public Customer createCustomer(String username, String password,
+	public CustomerImpl createCustomer(String username, String password,
 			MemberShipStatus status, int total_miles, int miles_ytd,
 			String phoneNumber, PhoneType phoneNumberType,
 			CustomerAddress address) {
 		try{
-			Customer customer = new Customer(username, password, status, total_miles, miles_ytd, address, phoneNumber, phoneNumberType);
+			CustomerImpl customer = new CustomerImpl(username, password, status, total_miles, miles_ytd, address, phoneNumber, phoneNumberType);
 			Session session = sessionManager.getObjectGridSession();
 			ObjectMap customerMap = session.getMap(CUSTOMER_MAP_NAME);
 			customerMap.insert(customer.getUsername(), customer);
@@ -67,24 +69,24 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 	@Override
-	public Customer updateCustomer(Customer customer) {
+	public CustomerImpl updateCustomer(Customer customer) {
 		try{
 			Session session = sessionManager.getObjectGridSession();
 			ObjectMap customerMap = session.getMap(CUSTOMER_MAP_NAME);
 			customerMap.update(customer.getUsername(), customer);
-			return customer;
+			return (CustomerImpl) customer;
 		}catch (Exception e)
 		{
 			throw new RuntimeException(e);
 		}
 	}
 
-	private Customer getCustomer(String username) {
+	private CustomerImpl getCustomer(String username) {
 		try{
 			Session session = sessionManager.getObjectGridSession();
 			ObjectMap customerMap = session.getMap(CUSTOMER_MAP_NAME);
 			
-			Customer c = (Customer) customerMap.get(username);
+			CustomerImpl c = (CustomerImpl) customerMap.get(username);
 			return c;
 		}catch (Exception e)
 		{
@@ -93,8 +95,8 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 	
 	@Override
-	public Customer getCustomerByUsername(String username) {
-		Customer c = getCustomer(username);
+	public CustomerImpl getCustomerByUsername(String username) {
+		CustomerImpl c = getCustomer(username);
 		if (c != null) {
 			c.setPassword(null);
 		}
@@ -104,7 +106,7 @@ public class CustomerServiceImpl implements CustomerService{
 	@Override
 	public boolean validateCustomer(String username, String password) {
 		boolean validatedCustomer = false;
-		Customer customerToValidate = getCustomer(username);
+		CustomerImpl customerToValidate = getCustomer(username);
 		if (customerToValidate != null) {
 			validatedCustomer = password.equals(customerToValidate.getPassword());
 		}
@@ -112,9 +114,9 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 	@Override
-	public Customer getCustomerByUsernameAndPassword(String username,
+	public CustomerImpl getCustomerByUsernameAndPassword(String username,
 			String password) {
-		Customer c = getCustomer(username);
+		CustomerImpl c = getCustomer(username);
 		if (!c.getPassword().equals(password)) {
 			return null;
 		}
@@ -155,7 +157,7 @@ public class CustomerServiceImpl implements CustomerService{
 			c.setTime(now);
 			c.add(Calendar.DAY_OF_YEAR, DAYS_TO_ALLOW_SESSION);
 			Date expiration = c.getTime();
-			CustomerSession cSession = new CustomerSession(sessionId, customerId, now, expiration);
+			CustomerSession cSession = new CustomerSessionImpl(sessionId, customerId, now, expiration);
 			Session session = sessionManager.getObjectGridSession();
 			ObjectMap customerSessionMap = session.getMap(CUSTOMER_SESSION_MAP_NAME);
 			customerSessionMap.insert(cSession.getId(), cSession);

@@ -55,7 +55,7 @@ public class Loader {
     	System.setProperty("loader.numCustomers", numCustomers);
 
     	// TODO:  Later add back in other implementations
-		ctx = new AnnotationConfigApplicationContext(WXSDirectAppConfig.class);
+		ctx = new AnnotationConfigApplicationContext(AstyanaxConfig.class);
 		
 		FlightLoader flightLoader = ctx.getBean(FlightLoader.class);
 		CustomerLoader customerLoader = ctx.getBean(CustomerLoader.class);

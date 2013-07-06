@@ -31,11 +31,12 @@ import com.acmeair.entities.CustomerSession;
 import com.acmeair.entities.impl.MemberShipStatus;
 import com.acmeair.entities.impl.PhoneType;
 import com.acmeair.service.CustomerService;
+import com.acmeair.service.CustomerServiceLoader;
 import com.acmeair.service.KeyGenerator;
 import com.netflix.astyanax.entitystore.EntityManager;
 
 @Service("customerService")
-public class CustomerServiceImpl implements CustomerService {
+public class CustomerServiceImpl implements CustomerService, CustomerServiceLoader {
 
 	private static final int DAYS_TO_ALLOW_SESSION = 1;
 

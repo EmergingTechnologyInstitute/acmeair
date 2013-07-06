@@ -29,6 +29,7 @@ import com.acmeair.entities.CustomerSession;
 import com.acmeair.entities.impl.MemberShipStatus;
 import com.acmeair.entities.impl.PhoneType;
 import com.acmeair.service.CustomerService;
+import com.acmeair.service.CustomerServiceLoader;
 import com.acmeair.service.KeyGenerator;
 import com.acmeair.wxs.entities.CustomerImpl;
 import com.acmeair.wxs.entities.CustomerSessionImpl;
@@ -37,7 +38,7 @@ import com.ibm.websphere.objectgrid.ObjectMap;
 import com.ibm.websphere.objectgrid.Session;
 
 @Service("customerService")
-public class CustomerServiceImpl implements CustomerService{
+public class CustomerServiceImpl implements CustomerService, CustomerServiceLoader{
 	
 	private static final String CUSTOMER_MAP_NAME="Customer";
 	private static final String CUSTOMER_SESSION_MAP_NAME="CustomerSession";

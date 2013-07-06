@@ -31,6 +31,7 @@
     <module>acmeair-common</module>
     <module>acmeair-loader</module>
     <module>acmeair-services</module>
+    <module>acmeair-services-astyanax</module>
     <module>acmeair-services-wxs</module>
     <module>acmeair-webapp</module>
     <module>acmeair-driver</module>

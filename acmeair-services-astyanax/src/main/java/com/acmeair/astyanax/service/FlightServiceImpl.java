@@ -78,7 +78,7 @@ public class FlightServiceImpl implements FlightService, FlightServiceLoader {
 						EntityManagers.CF_FLIGHT_SEGMENT, "originPort",
 						fromAirport, "destPort", toAirport));
 
-		List<FlightImpl> result = new ArrayList<>();
+		List<FlightImpl> result = new ArrayList<FlightImpl>();
 
 		for (FlightSegment flightSegment : flightSegments) {
 			String query = String.format(
@@ -112,7 +112,7 @@ public class FlightServiceImpl implements FlightService, FlightServiceLoader {
 						EntityManagers.CF_FLIGHT_SEGMENT, "originPort",
 						fromAirport, "destPort", toAirport));
 
-		List<FlightImpl> result = new ArrayList<>();
+		List<FlightImpl> result = new ArrayList<FlightImpl>();
 
 		for (FlightSegment flightSegment : flightSegments) {
 

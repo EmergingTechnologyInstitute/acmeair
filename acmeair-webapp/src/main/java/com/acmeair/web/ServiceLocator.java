@@ -88,19 +88,16 @@ public class ServiceLocator {
 		@SuppressWarnings("rawtypes")
 		Class clazz;
 
-		if (type == null)
+		if (type == null) {
 			type = "astyanax";
-
-		switch (type) {
-		case "astyanax":
+		} 
+		
+		if (type.equals("astyanax")) {
 			clazz = AstyanaxDirectAppConfig.class;
-			break;
-		case "wxs":
+		} else if (type.equals("wxs")) {
 			clazz = WXSDirectAppConfig.class;
-			break;
-		default:
-			clazz = WXSDirectAppConfig.class;
-			break;
+		} else {
+			clazz = WXSDirectAppConfig.class;			
 		}
 		ctx = new AnnotationConfigApplicationContext(clazz);
 	}

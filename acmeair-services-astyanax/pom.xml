@@ -15,35 +15,49 @@
 **************************************************************************** -->
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>acmeair</artifactId>
-    <groupId>com.acmeair</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
-  <artifactId>acmeair-services-astyanax</artifactId>
-  <name>acmeair-services-astyanax</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>12.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.acmeair</groupId>
-			<artifactId>acmeair-common</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.acmeair</groupId>
-			<artifactId>acmeair-services</artifactId>
-			<version>${project.version}</version>
-		</dependency>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>acmeair</artifactId>
+        <groupId>com.acmeair</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>acmeair-services-astyanax</artifactId>
+    <name>acmeair-services-astyanax</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.acmeair</groupId>
+            <artifactId>acmeair-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.acmeair</groupId>
+            <artifactId>acmeair-services</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
         </dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.netflix.astyanax</groupId>
+            <artifactId>astyanax</artifactId>
+            <version>1.56.42</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+            
+            
+
+
+    </dependencies>
 </project>

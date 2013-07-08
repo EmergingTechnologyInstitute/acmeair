@@ -41,7 +41,7 @@ import com.ibm.websphere.objectgrid.query.ObjectQuery;
 //import org.apache.commons.logging.Log;
 //import org.apache.commons.logging.LogFactory;
 
-@Service("bookingService")
+@Service("wxsBookingService")
 public class BookingServiceImpl implements BookingService {
 
 	private static final String BOOKING_MAP_NAME = "Booking";

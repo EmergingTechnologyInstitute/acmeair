@@ -45,7 +45,7 @@ import com.ibm.websphere.objectgrid.Session;
 import com.ibm.websphere.objectgrid.datagrid.AgentManager;
 import com.ibm.websphere.objectgrid.query.ObjectQuery;
 
-@Service("flightService")
+@Service("wxsFlightService")
 public class FlightServiceImpl implements FlightService, FlightServiceLoader {
 
 	private static final String FLIGHT_MAP_NAME = "Flight";

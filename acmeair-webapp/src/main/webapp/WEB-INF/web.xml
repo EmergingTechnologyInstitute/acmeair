@@ -40,8 +40,7 @@
 	</filter-mapping>
 
 	<!-- Bootstrap the root application context as usual using ContextLoaderListener -->
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	<listener>		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	<servlet>
 		<servlet-name>javax.ws.rs.core.Application</servlet-name>

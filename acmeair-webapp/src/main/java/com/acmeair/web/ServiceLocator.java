@@ -24,12 +24,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.acmeair.web.config.AstyanaxDirectAppConfig;
-import com.acmeair.web.config.WXSDirectAppConfig;
 
 public class ServiceLocator {
 
 	public static String REPOSITORY_LOOKUP_KEY = "com.acmeair.repository.type";
+	
 	final ApplicationContext ctx;
 	private static Logger logger = LoggerFactory
 			.getLogger(ServiceLocator.class);
@@ -49,7 +48,7 @@ public class ServiceLocator {
 
 	private ServiceLocator() {
 		String type = null;
-		String lookup = REPOSITORY_LOOKUP_KEY.replace('.', '/');
+		String lookup = "contextConfigLocation";
 		javax.naming.Context context = null;
 		javax.naming.Context envContext;
 		try {
@@ -58,7 +57,7 @@ public class ServiceLocator {
 			if (envContext != null)
 				type = (String) envContext.lookup(lookup);
 		} catch (NamingException e) {
-			// e.printStackTrace();
+			e.printStackTrace();
 		}
 
 		if (type != null) {
@@ -87,18 +86,33 @@ public class ServiceLocator {
 
 		@SuppressWarnings("rawtypes")
 		Class clazz;
+		
+		logger.info("Type is:"+type);
 
 		if (type == null) {
-			type = "astyanax";
+			type = "wxs";
 		} 
 		
 		if (type.equals("astyanax")) {
-			clazz = AstyanaxDirectAppConfig.class;
+			try {
+				clazz = Class.forName("com.acmeair.web.config.AstyanaxDirectAppConfig");
+			} catch (ClassNotFoundException e) {		
+				clazz = null;
+			}
 		} else if (type.equals("wxs")) {
-			clazz = WXSDirectAppConfig.class;
+			try {
+				clazz = Class.forName("com.acmeair.web.config.WXSDirectAppConfig");
+			} catch (ClassNotFoundException e) {
+				clazz = null;
+			}
 		} else {
-			clazz = WXSDirectAppConfig.class;			
+			try {
+				clazz = Class.forName("com.acmeair.web.config.WXSDirectAppConfig");
+			} catch (ClassNotFoundException e) {
+				clazz = null;
+			}			
 		}
+		logger.info("Using ApplicationConfig:"+clazz);
 		ctx = new AnnotationConfigApplicationContext(clazz);
 	}
 

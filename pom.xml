@@ -34,6 +34,8 @@
     <module>acmeair-services-astyanax</module>
     <module>acmeair-services-wxs</module>
     <module>acmeair-webapp</module>
+    <module>acmeair-webapp-astyanax</module>
+    <module>acmeair-webapp-wxs</module>
     <module>acmeair-driver</module>
   </modules>
 

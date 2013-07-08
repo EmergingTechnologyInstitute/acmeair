@@ -1,0 +1,565 @@
+Apache Maven 3.0.4 (r1232337; 2012-01-17 08:44:56+0000)
+Maven home: D:\tools\apache-maven-3.0.4\bin\..
+Java version: 1.7.0_15, vendor: Oracle Corporation
+Java home: c:\jdk\jre
+Default locale: en_GB, platform encoding: Cp1252
+OS name: "windows 7", version: "6.1", arch: "amd64", family: "windows"
+[INFO] Error stacktraces are turned on.
+[DEBUG] Reading global settings from D:\tools\apache-maven-3.0.4\bin\..\conf\settings.xml
+[DEBUG] Reading user settings from C:\Users\bondj\.m2\settings.xml
+[DEBUG] Using local repository at C:\Users\bondj\.m2\repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10 for C:\Users\bondj\.m2\repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project com.acmeair:acmeair-loader:jar:1.0-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Resolving plugin prefix exec from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix exec to org.codehaus.mojo:exec-maven-plugin from POM com.acmeair:acmeair-loader:jar:1.0-SNAPSHOT
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: com.acmeair:acmeair-loader:jar:1.0-SNAPSHOT
+[DEBUG] Tasks:   [exec:java]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building acmeair-loader 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Resolving plugin prefix exec from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix exec to org.codehaus.mojo:exec-maven-plugin from POM com.acmeair:acmeair-loader:jar:1.0-SNAPSHOT
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.acmeair:acmeair-loader:1.0-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [test]
+[DEBUG] Repositories (dependencies): [maven (http://repo.maven.apache.org/maven2, releases+snapshots), typesafe (http://repo.typesafe.com/typesafe/releases/, releases+snapshots), central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] Repositories (plugins)     : [central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] --- init fork of com.acmeair:acmeair-loader:1.0-SNAPSHOT for org.codehaus.mojo:exec-maven-plugin:1.2.1:java (default-cli) ---
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): []
+[DEBUG] --- exit fork of com.acmeair:acmeair-loader:1.0-SNAPSHOT for org.codehaus.mojo:exec-maven-plugin:1.2.1:java (default-cli) ---
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.codehaus.mojo:exec-maven-plugin:1.2.1:java (default-cli)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <arguments>${exec.arguments}</arguments>
+  <classpathScope default-value="runtime">${exec.classpathScope}</classpathScope>
+  <cleanupDaemonThreads>${exec.cleanupDaemonThreads} default-value=</cleanupDaemonThreads>
+  <commandlineArgs>${exec.args}</commandlineArgs>
+  <daemonThreadJoinTimeout default-value="15000">${exec.daemonThreadJoinTimeout}</daemonThreadJoinTimeout>
+  <includePluginDependencies default-value="false">${exec.includePluginDependencies}</includePluginDependencies>
+  <includeProjectDependencies default-value="true">${exec.includeProjectDependencies}</includeProjectDependencies>
+  <keepAlive default-value="false">${exec.keepAlive}</keepAlive>
+  <killAfter default-value="-1">${exec.killAfter}</killAfter>
+  <localRepository default-value="${localRepository}"/>
+  <mainClass>com.acmeair.loader.Loader</mainClass>
+  <pluginDependencies default-value="${plugin.artifacts}"/>
+  <project default-value="${project}"/>
+  <remoteRepositories default-value="${project.remoteArtifactRepositories}"/>
+  <skip default-value="false">${skip}</skip>
+  <sourceRoot>${sourceRoot}</sourceRoot>
+  <stopUnresponsiveDaemonThreads>${exec.stopUnresponsiveDaemonThreads} default-value=</stopUnresponsiveDaemonThreads>
+  <testSourceRoot>${testSourceRoot}</testSourceRoot>
+</configuration>
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] >>> exec-maven-plugin:1.2.1:java (default-cli) @ acmeair-loader >>>
+[INFO] 
+[INFO] <<< exec-maven-plugin:1.2.1:java (default-cli) @ acmeair-loader <<<
+[DEBUG] Skipped remote update check for com.acmeair:acmeair-common:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair-common:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair-common:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair-common:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair-services:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair-services:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair-services:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair-services:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair-services-wxs:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair-services-wxs:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair-services-wxs:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] Skipped remote update check for com.acmeair:acmeair-services-wxs:1.0-SNAPSHOT/maven-metadata.xml, locally installed metadata up-to-date.
+[DEBUG] com.acmeair:acmeair-loader:jar:1.0-SNAPSHOT
+[DEBUG]    com.acmeair:acmeair-common:jar:1.0-SNAPSHOT:compile
+[DEBUG]    com.acmeair:acmeair-services:jar:1.0-SNAPSHOT:compile
+[DEBUG]    com.acmeair:acmeair-services-wxs:jar:1.0-SNAPSHOT:compile
+[DEBUG]       com.google.guava:guava:jar:12.0:compile
+[DEBUG]          com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[DEBUG]       com.ibm.websphere.objectgrid:objectgrid:jar:8.6.0.2:compile
+[DEBUG]    org.springframework:spring-context:jar:3.1.2.RELEASE:compile
+[DEBUG]       org.springframework:spring-aop:jar:3.1.2.RELEASE:compile
+[DEBUG]       org.springframework:spring-beans:jar:3.1.2.RELEASE:compile
+[DEBUG]       org.springframework:spring-core:jar:3.1.2.RELEASE:compile
+[DEBUG]          commons-logging:commons-logging:jar:1.1.1:compile
+[DEBUG]       org.springframework:spring-expression:jar:3.1.2.RELEASE:compile
+[DEBUG]       org.springframework:spring-asm:jar:3.1.2.RELEASE:compile
+[DEBUG]    org.springframework:spring-tx:jar:3.1.2.RELEASE:compile
+[DEBUG]       aopalliance:aopalliance:jar:1.0:compile
+[DEBUG]    cglib:cglib:jar:2.2.2:compile
+[DEBUG]       asm:asm:jar:3.3.1:compile
+[DEBUG]    org.aspectj:aspectjrt:jar:1.6.8:compile
+[DEBUG]    org.aspectj:aspectjweaver:jar:1.6.8:compile
+[DEBUG]    ch.qos.logback:logback-classic:jar:1.0.6:compile
+[DEBUG]       ch.qos.logback:logback-core:jar:1.0.6:compile
+[DEBUG]       org.slf4j:slf4j-api:jar:1.6.5:compile
+[INFO] 
+[INFO] --- exec-maven-plugin:1.2.1:java (default-cli) @ acmeair-loader ---
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.transfer < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.metadata < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.collection < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.version < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.artifact < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.spi < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.graph < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.impl < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.deployment < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.installation < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.resolution < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG] Populating class realm maven.api
+[DEBUG] org.codehaus.mojo:exec-maven-plugin:jar:1.2.1:
+[DEBUG]    org.apache.maven:maven-toolchain:jar:1.0:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile
+[DEBUG]          org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+[DEBUG]       commons-cli:commons-cli:jar:1.0:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.6:compile
+[DEBUG]       classworlds:classworlds:jar:1.1:compile
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:2.0.5:compile
+[DEBUG]    org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9:compile
+[DEBUG]       junit:junit:jar:3.8.2:test (scope managed from compile) (version managed from 3.8.1)
+[DEBUG]    org.apache.commons:commons-exec:jar:1.1:compile
+[DEBUG] Created new class realm plugin>org.codehaus.mojo:exec-maven-plugin:1.2.1
+[DEBUG] Importing foreign packages into class realm plugin>org.codehaus.mojo:exec-maven-plugin:1.2.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.codehaus.mojo:exec-maven-plugin:1.2.1
+[DEBUG]   Included: org.codehaus.mojo:exec-maven-plugin:jar:1.2.1
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+[DEBUG]   Included: commons-cli:commons-cli:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.5
+[DEBUG]   Included: org.apache.commons:commons-exec:jar:1.1
+[DEBUG]   Excluded: org.apache.maven:maven-toolchain:jar:1.0
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9
+[DEBUG]   Excluded: junit:junit:jar:3.8.2
+[DEBUG] Configuring mojo org.codehaus.mojo:exec-maven-plugin:1.2.1:java from plugin realm ClassRealm[plugin>org.codehaus.mojo:exec-maven-plugin:1.2.1, parent: sun.misc.Launcher$AppClassLoader@709db0ad]
+[DEBUG] Configuring mojo 'org.codehaus.mojo:exec-maven-plugin:1.2.1:java' with basic configurator -->
+[DEBUG]   (f) arguments = []
+[DEBUG]   (f) classpathScope = runtime
+[DEBUG]   (f) cleanupDaemonThreads = false
+[DEBUG]   (f) daemonThreadJoinTimeout = 15000
+[DEBUG]   (f) includePluginDependencies = false
+[DEBUG]   (f) includeProjectDependencies = true
+[DEBUG]   (f) keepAlive = false
+[DEBUG]   (f) killAfter = -1
+[DEBUG]   (f) localRepository =        id: local
+      url: file:///C:/Users/bondj/.m2/repository/
+   layout: none
+
+[DEBUG]   (f) mainClass = com.acmeair.loader.Loader
+[DEBUG]   (f) pluginDependencies = [org.codehaus.mojo:exec-maven-plugin:maven-plugin:1.2.1:, org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile, org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile, commons-cli:commons-cli:jar:1.0:compile, org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile, org.codehaus.plexus:plexus-utils:jar:2.0.5:compile, org.apache.commons:commons-exec:jar:1.1:compile]
+[DEBUG]   (f) project = MavenProject: com.acmeair:acmeair-loader:1.0-SNAPSHOT @ C:\eclipse\git\RWacmeair\acmeair-loader\pom.xml
+[DEBUG]   (f) remoteRepositories = [       id: maven
+      url: http://repo.maven.apache.org/maven2
+   layout: default
+snapshots: [enabled => true, update => daily]
+ releases: [enabled => true, update => daily]
+,        id: typesafe
+      url: http://repo.typesafe.com/typesafe/releases/
+   layout: default
+snapshots: [enabled => true, update => daily]
+ releases: [enabled => true, update => daily]
+,        id: central
+      url: http://repo.maven.apache.org/maven2
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => daily]
+]
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) stopUnresponsiveDaemonThreads = false
+[DEBUG] -- end configuration --
+[DEBUG] Invoking : com.acmeair.loader.Loader.main()
+[DEBUG] Plugin Dependencies will be excluded.
+[DEBUG] Project Dependencies will be included.
+[DEBUG] Collected project artifacts [com.acmeair:acmeair-common:jar:1.0-SNAPSHOT:compile, com.acmeair:acmeair-services:jar:1.0-SNAPSHOT:compile, com.acmeair:acmeair-services-wxs:jar:1.0-SNAPSHOT:compile, com.google.guava:guava:jar:12.0:compile, com.google.code.findbugs:jsr305:jar:1.3.9:compile, com.ibm.websphere.objectgrid:objectgrid:jar:8.6.0.2:compile, org.springframework:spring-context:jar:3.1.2.RELEASE:compile, org.springframework:spring-aop:jar:3.1.2.RELEASE:compile, org.springframework:spring-beans:jar:3.1.2.RELEASE:compile, org.springframework:spring-core:jar:3.1.2.RELEASE:compile, commons-logging:commons-logging:jar:1.1.1:compile, org.springframework:spring-expression:jar:3.1.2.RELEASE:compile, org.springframework:spring-asm:jar:3.1.2.RELEASE:compile, org.springframework:spring-tx:jar:3.1.2.RELEASE:compile, aopalliance:aopalliance:jar:1.0:compile, cglib:cglib:jar:2.2.2:compile, asm:asm:jar:3.3.1:compile, org.aspectj:aspectjrt:jar:1.6.8:compile, org.aspectj:aspectjweaver:jar:1.6.8:compile, ch.qos.logback:logback-classic:jar:1.0.6:compile, ch.qos.logback:logback-core:jar:1.0.6:compile, org.slf4j:slf4j-api:jar:1.6.5:compile]
+[DEBUG] Collected project classpath [C:\eclipse\git\RWacmeair\acmeair-loader\target\classes]
+[DEBUG] Adding to classpath : file:/C:/eclipse/git/RWacmeair/acmeair-loader/target/classes/
+[DEBUG] Adding project dependency artifact: acmeair-common to classpath
+[DEBUG] Adding project dependency artifact: acmeair-services to classpath
+[DEBUG] Adding project dependency artifact: acmeair-services-wxs to classpath
+[DEBUG] Adding project dependency artifact: guava to classpath
+[DEBUG] Adding project dependency artifact: jsr305 to classpath
+[DEBUG] Adding project dependency artifact: objectgrid to classpath
+[DEBUG] Adding project dependency artifact: spring-context to classpath
+[DEBUG] Adding project dependency artifact: spring-aop to classpath
+[DEBUG] Adding project dependency artifact: spring-beans to classpath
+[DEBUG] Adding project dependency artifact: spring-core to classpath
+[DEBUG] Adding project dependency artifact: commons-logging to classpath
+[DEBUG] Adding project dependency artifact: spring-expression to classpath
+[DEBUG] Adding project dependency artifact: spring-asm to classpath
+[DEBUG] Adding project dependency artifact: spring-tx to classpath
+[DEBUG] Adding project dependency artifact: aopalliance to classpath
+[DEBUG] Adding project dependency artifact: cglib to classpath
+[DEBUG] Adding project dependency artifact: asm to classpath
+[DEBUG] Adding project dependency artifact: aspectjrt to classpath
+[DEBUG] Adding project dependency artifact: aspectjweaver to classpath
+[DEBUG] Adding project dependency artifact: logback-classic to classpath
+[DEBUG] Adding project dependency artifact: logback-core to classpath
+[DEBUG] Adding project dependency artifact: slf4j-api to classpath
+[DEBUG] joining on thread Thread[com.acmeair.loader.Loader.main(),5,com.acmeair.loader.Loader]
+[DEBUG] Setting accessibility to true in order to invoke main().
+[06/07/13 16:02:43:070 BST] 0000000a RuntimeInfo   I   CWOBJ0903I: The internal version of WebSphere eXtreme Scale is v7.0.2 (8.6.0.2) [cf21323.07120159].
+[06/07/13 16:02:43:382 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.objectgrid.container.reconnect.block.reconnect.time" property is "30000".
+[06/07/13 16:02:43:384 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.objectgrid.container.reconnect.min.successful.heartbeats" property is "10".
+[06/07/13 16:02:43:385 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.objectgrid.container.reconnect.restart" property is "true".
+[06/07/13 16:02:43:386 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.objectgrid.container.reconnect.restart.delay" property is "2000".
+[06/07/13 16:02:43:388 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.objectgrid.container.reconnect.restart.parent.timeout" property is "180000".
+[06/07/13 16:02:43:389 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.objectgrid.container.reconnect.retry.forever" property is "false".
+[06/07/13 16:02:43:390 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.objectgrid.catalog.placement.rebalance.delay.post.container.stop" property is "500".
+[06/07/13 16:02:43:391 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.xs.catalog.disjoin.thread.pool.min" property is "1".
+[06/07/13 16:02:43:392 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.xs.catalog.disjoin.thread.pool.max" property is "10".
+[06/07/13 16:02:43:393 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.xs.catalog.work.exec.thread.pool.min" property is "1".
+[06/07/13 16:02:43:395 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.xs.catalog.work.exec.thread.pool.max" property is "10".
+[06/07/13 16:02:43:396 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.xs.catalog.route.import.thread.pool.min" property is "1".
+[06/07/13 16:02:43:397 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.xs.catalog.route.import.thread.pool.max" property is "10".
+[06/07/13 16:02:43:398 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.xs.determine.transport.ssl.timeout" property is "10000".
+[06/07/13 16:02:43:399 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.xs.determine.transport.timeout" property is "10000".
+[06/07/13 16:02:43:401 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.xs.determine.transport.attempts" property is "3".
+[06/07/13 16:02:43:402 BST] 0000000a WXSProperties I   CWOBJ0054I: The value of the "com.ibm.websphere.objectgrid.server.catalog.placement.work.timeout.value" property is "60000".
+[06/07/13 16:02:44:273 BST] 0000000a LocationServi I   CWOBJ0204I: The transport type of this Client JVM is being determined by contacting the catalog service domain with the catalog service endpoints of: 127.0.0.1:2809.  
+[06/07/13 16:02:45:285 BST] 0000000a LocationServi W   CWOBJ0202W: The transport type of the remote server on 127.0.0.1:2809 cannot be determined. The transport types of [none] is used. The following exception occurred while determining the transport type: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:69)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:157)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.ibm.ws.objectgrid.naming.DetermineTransport$1.run(DetermineTransport.java:164)
+	at com.ibm.ws.objectgrid.naming.DetermineTransport$1.run(DetermineTransport.java:161)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.objectgrid.naming.DetermineTransport.probe(DetermineTransport.java:161)
+	at com.ibm.ws.objectgrid.naming.LocationServiceFactory$1.call(LocationServiceFactory.java:1263)
+	at com.ibm.ws.objectgrid.naming.LocationServiceFactory$1.call(LocationServiceFactory.java:1259)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+ 
+[06/07/13 16:02:45:294 BST] 0000000a DefaultListab I org.springframework.beans.factory.support.DefaultSingletonBeanRegistry destroySingletons Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@78236c8b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,astyanaxConfig,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,customerLoader,flightLoader,WXSDirectAppConfig,bookingService,customerService,keyGenerator,flightService,sessionManager]; root of factory hierarchy
+[WARNING] 
+java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:297)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerLoader': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.acmeair.wxs.utils.WXSSessionManager com.acmeair.wxs.service.CustomerServiceImpl.sessionManager; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionManager' defined in class path resource [spring-config-acmeair-data-wxs-direct-notx.xml]: Invocation of init method failed; nested exception is com.ibm.websphere.objectgrid.ObjectGridRuntimeException: Unable to connect to catalog server at endpoints:127.0.0.1:2809
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:73)
+	at com.acmeair.loader.Loader.execute(Loader.java:58)
+	at com.acmeair.loader.Loader.main(Loader.java:33)
+	... 6 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.acmeair.wxs.utils.WXSSessionManager com.acmeair.wxs.service.CustomerServiceImpl.sessionManager; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionManager' defined in class path resource [spring-config-acmeair-data-wxs-direct-notx.xml]: Invocation of init method failed; nested exception is com.ibm.websphere.objectgrid.ObjectGridRuntimeException: Unable to connect to catalog server at endpoints:127.0.0.1:2809
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:443)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:417)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:559)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:150)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+	... 19 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.acmeair.wxs.utils.WXSSessionManager com.acmeair.wxs.service.CustomerServiceImpl.sessionManager; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionManager' defined in class path resource [spring-config-acmeair-data-wxs-direct-notx.xml]: Invocation of init method failed; nested exception is com.ibm.websphere.objectgrid.ObjectGridRuntimeException: Unable to connect to catalog server at endpoints:127.0.0.1:2809
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	... 32 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionManager' defined in class path resource [spring-config-acmeair-data-wxs-direct-notx.xml]: Invocation of init method failed; nested exception is com.ibm.websphere.objectgrid.ObjectGridRuntimeException: Unable to connect to catalog server at endpoints:127.0.0.1:2809
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:876)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:818)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+	... 34 more
+Caused by: com.ibm.websphere.objectgrid.ObjectGridRuntimeException: Unable to connect to catalog server at endpoints:127.0.0.1:2809
+	at com.acmeair.wxs.utils.WXSSessionManager.connectClient(WXSSessionManager.java:124)
+	at com.acmeair.wxs.utils.WXSSessionManager.getObjectGrid(WXSSessionManager.java:234)
+	at com.acmeair.wxs.utils.WXSSessionManager.prepareForTransaction(WXSSessionManager.java:227)
+	at com.acmeair.wxs.utils.WXSSessionManager.afterPropertiesSet(WXSSessionManager.java:221)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 44 more
+Caused by: com.ibm.websphere.objectgrid.ConnectException: java.net.ConnectException: Connection refused: connect
+	at com.ibm.ws.objectgrid.ObjectGridManagerImpl.connect(ObjectGridManagerImpl.java:1267)
+	at com.acmeair.wxs.utils.WXSSessionManager.connectClient(WXSSessionManager.java:110)
+	... 49 more
+Caused by: com.ibm.websphere.objectgrid.ObjectGridRuntimeException: java.net.ConnectException: Connection refused: connect
+	at com.ibm.ws.objectgrid.naming.LocationServiceFactory.bootstrap(LocationServiceFactory.java:320)
+	at com.ibm.ws.objectgrid.naming.LocationServiceFactory.bootstrap(LocationServiceFactory.java:154)
+	at com.ibm.ws.objectgrid.ObjectGridManagerImpl.connect(ObjectGridManagerImpl.java:1240)
+	... 50 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:69)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:157)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.ibm.ws.objectgrid.naming.DetermineTransport$1.run(DetermineTransport.java:164)
+	at com.ibm.ws.objectgrid.naming.DetermineTransport$1.run(DetermineTransport.java:161)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.objectgrid.naming.DetermineTransport.probe(DetermineTransport.java:161)
+	at com.ibm.ws.objectgrid.naming.LocationServiceFactory$1.call(LocationServiceFactory.java:1263)
+	at com.ibm.ws.objectgrid.naming.LocationServiceFactory$1.call(LocationServiceFactory.java:1259)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	... 1 more
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.456s
+[INFO] Finished at: Sat Jul 06 16:02:45 BST 2013
+[INFO] Final Memory: 11M/307M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.codehaus.mojo:exec-maven-plugin:1.2.1:java (default-cli) on project acmeair-loader: An exception occured while executing the Java class. null: InvocationTargetException: Error creating bean with name 'customerLoader': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.acmeair.wxs.utils.WXSSessionManager com.acmeair.wxs.service.CustomerServiceImpl.sessionManager; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionManager' defined in class path resource [spring-config-acmeair-data-wxs-direct-notx.xml]: Invocation of init method failed; nested exception is com.ibm.websphere.objectgrid.ObjectGridRuntimeException: Unable to connect to catalog server at endpoints:127.0.0.1:2809: java.net.ConnectException: Connection refused: connect -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.codehaus.mojo:exec-maven-plugin:1.2.1:java (default-cli) on project acmeair-loader: An exception occured while executing the Java class. null
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:217)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+Caused by: org.apache.maven.plugin.MojoExecutionException: An exception occured while executing the Java class. null
+	at org.codehaus.mojo.exec.ExecJavaMojo.execute(ExecJavaMojo.java:352)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	... 19 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.mojo.exec.ExecJavaMojo$1.run(ExecJavaMojo.java:297)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerLoader': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.acmeair.wxs.utils.WXSSessionManager com.acmeair.wxs.service.CustomerServiceImpl.sessionManager; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionManager' defined in class path resource [spring-config-acmeair-data-wxs-direct-notx.xml]: Invocation of init method failed; nested exception is com.ibm.websphere.objectgrid.ObjectGridRuntimeException: Unable to connect to catalog server at endpoints:127.0.0.1:2809
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:609)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:469)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:73)
+	at com.acmeair.loader.Loader.execute(Loader.java:58)
+	at com.acmeair.loader.Loader.main(Loader.java:33)
+	... 6 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerService': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.acmeair.wxs.utils.WXSSessionManager com.acmeair.wxs.service.CustomerServiceImpl.sessionManager; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionManager' defined in class path resource [spring-config-acmeair-data-wxs-direct-notx.xml]: Invocation of init method failed; nested exception is com.ibm.websphere.objectgrid.ObjectGridRuntimeException: Unable to connect to catalog server at endpoints:127.0.0.1:2809
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:443)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:417)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:559)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:150)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:304)
+	... 19 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.acmeair.wxs.utils.WXSSessionManager com.acmeair.wxs.service.CustomerServiceImpl.sessionManager; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionManager' defined in class path resource [spring-config-acmeair-data-wxs-direct-notx.xml]: Invocation of init method failed; nested exception is com.ibm.websphere.objectgrid.ObjectGridRuntimeException: Unable to connect to catalog server at endpoints:127.0.0.1:2809
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:506)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:284)
+	... 32 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionManager' defined in class path resource [spring-config-acmeair-data-wxs-direct-notx.xml]: Invocation of init method failed; nested exception is com.ibm.websphere.objectgrid.ObjectGridRuntimeException: Unable to connect to catalog server at endpoints:127.0.0.1:2809
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:876)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:818)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:735)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:478)
+	... 34 more
+Caused by: com.ibm.websphere.objectgrid.ObjectGridRuntimeException: Unable to connect to catalog server at endpoints:127.0.0.1:2809
+	at com.acmeair.wxs.utils.WXSSessionManager.connectClient(WXSSessionManager.java:124)
+	at com.acmeair.wxs.utils.WXSSessionManager.getObjectGrid(WXSSessionManager.java:234)
+	at com.acmeair.wxs.utils.WXSSessionManager.prepareForTransaction(WXSSessionManager.java:227)
+	at com.acmeair.wxs.utils.WXSSessionManager.afterPropertiesSet(WXSSessionManager.java:221)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 44 more
+Caused by: com.ibm.websphere.objectgrid.ConnectException: java.net.ConnectException: Connection refused: connect
+	at com.ibm.ws.objectgrid.ObjectGridManagerImpl.connect(ObjectGridManagerImpl.java:1267)
+	at com.acmeair.wxs.utils.WXSSessionManager.connectClient(WXSSessionManager.java:110)
+	... 49 more
+Caused by: com.ibm.websphere.objectgrid.ObjectGridRuntimeException: java.net.ConnectException: Connection refused: connect
+	at com.ibm.ws.objectgrid.naming.LocationServiceFactory.bootstrap(LocationServiceFactory.java:320)
+	at com.ibm.ws.objectgrid.naming.LocationServiceFactory.bootstrap(LocationServiceFactory.java:154)
+	at com.ibm.ws.objectgrid.ObjectGridManagerImpl.connect(ObjectGridManagerImpl.java:1240)
+	... 50 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:69)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:157)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:391)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.ibm.ws.objectgrid.naming.DetermineTransport$1.run(DetermineTransport.java:164)
+	at com.ibm.ws.objectgrid.naming.DetermineTransport$1.run(DetermineTransport.java:161)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.ibm.ws.objectgrid.naming.DetermineTransport.probe(DetermineTransport.java:161)
+	at com.ibm.ws.objectgrid.naming.LocationServiceFactory$1.call(LocationServiceFactory.java:1263)
+	at com.ibm.ws.objectgrid.naming.LocationServiceFactory$1.call(LocationServiceFactory.java:1259)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	... 1 more
+[ERROR] 
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

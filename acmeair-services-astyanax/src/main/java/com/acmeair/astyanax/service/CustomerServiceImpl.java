@@ -35,7 +35,7 @@ import com.acmeair.service.CustomerServiceLoader;
 import com.acmeair.service.KeyGenerator;
 import com.netflix.astyanax.entitystore.EntityManager;
 
-@Service("customerService")
+@Service("astyanaxCustomerService")
 public class CustomerServiceImpl implements CustomerService, CustomerServiceLoader {
 
 	private static final int DAYS_TO_ALLOW_SESSION = 1;

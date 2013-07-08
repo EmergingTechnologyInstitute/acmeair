@@ -36,7 +36,7 @@ import com.acmeair.service.FlightServiceLoader;
 import com.acmeair.service.KeyGenerator;
 import com.netflix.astyanax.entitystore.EntityManager;
 
-@Service("flightService")
+@Service("astyanaxFlightService")
 public class FlightServiceImpl implements FlightService, FlightServiceLoader {
 
 	@Resource

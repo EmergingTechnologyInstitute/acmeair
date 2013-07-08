@@ -37,7 +37,7 @@ import com.acmeair.wxs.utils.WXSSessionManager;
 import com.ibm.websphere.objectgrid.ObjectMap;
 import com.ibm.websphere.objectgrid.Session;
 
-@Service("customerService")
+@Service("wxsCustomerService")
 public class CustomerServiceImpl implements CustomerService, CustomerServiceLoader{
 	
 	private static final String CUSTOMER_MAP_NAME="Customer";

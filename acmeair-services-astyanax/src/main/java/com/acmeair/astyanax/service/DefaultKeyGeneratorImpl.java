@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 import com.acmeair.service.KeyGenerator;
 
 
-@Service("keyGenerator")
+@Service("astyanaxKeyGenerator")
 public class DefaultKeyGeneratorImpl implements KeyGenerator {
 
 	@Override

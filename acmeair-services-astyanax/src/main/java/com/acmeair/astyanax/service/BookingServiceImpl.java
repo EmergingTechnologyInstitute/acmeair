@@ -31,7 +31,7 @@ import com.acmeair.service.KeyGenerator;
 import com.netflix.astyanax.entitystore.EntityManager;
 
 
-@Service("bookingService")
+@Service("astyanaxBookingService")
 public class BookingServiceImpl implements BookingService {
 	
 	FlightServiceImpl flightService = new FlightServiceImpl();

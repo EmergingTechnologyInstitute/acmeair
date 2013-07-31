@@ -61,12 +61,13 @@ public class FlightImpl implements Serializable, Flight {
 		this.airplaneTypeId = airplaneTypeId;
 	}
 
-	public FlightPartitionableKey getPkey() {
+	@Override
+	public FlightPartitionableKey getKey() {
 		return pkey;
 	}
 	
 	@Override
-	public String geFlightId()
+	public String getFlightId()
 	{
 		return id;
 	}
@@ -87,13 +88,13 @@ public class FlightImpl implements Serializable, Flight {
 	}
 	
 	@Override
-	public Date getScheduledDepartureDate() {
+	public Date getScheduledDepartureTime() {
 		return scheduledDepartureTime;
 	}
 
 
 	@Override
-	public void setScheduledDepartureDate(Date scheduledDepartureTime) {
+	public void setScheduledDepartureTime(Date scheduledDepartureTime) {
 		this.scheduledDepartureTime = scheduledDepartureTime;
 	}
 

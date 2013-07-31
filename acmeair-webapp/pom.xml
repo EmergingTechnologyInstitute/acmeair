@@ -31,6 +31,16 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>com.acmeair</groupId>
+			<artifactId>acmeair-services-wxs</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.acmeair</groupId>
+			<artifactId>acmeair-services-astyanax</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>

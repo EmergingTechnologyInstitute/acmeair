@@ -144,7 +144,7 @@
 					return;
 				}
 				var grid = dijit.byId("gridFlights");
-				var bookingPK = grid.store.getValue(grid.getItem(selectedIndexForFlights), "pkey");	
+				var bookingPK = grid.store.getValue(grid.getItem(selectedIndexForFlights), "key");	
 				var xhrContent = { userid : loggedinuser }
 				xhrContent.number = bookingPK.id;
 				xhrContent.userid = bookingPK.customerId;

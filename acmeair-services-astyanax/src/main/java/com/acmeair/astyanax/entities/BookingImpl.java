@@ -53,7 +53,7 @@ public class BookingImpl implements Booking {
 			FlightImpl flight) {
 
 		this.id = id;
-		this.flightKey = flight.geFlightId();
+		this.flightKey = flight.getFlightId();
 		this.dateOfBooking = dateOfFlight;
 		this.customer = customer;
 		this.flight = flight;

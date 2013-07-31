@@ -107,18 +107,22 @@ public class FlightServiceImpl implements FlightService, FlightServiceLoader {
 		EntityManager<FlightImpl, String> flighEntityManager = EntityManagers
 				.getFlightEntityManager();
 
-		List<FlightSegmentImpl> flightSegments = entityManager.find(String
+		String cql = String
 				.format("SELECT * FROM %s WHERE %s=%s AND %s=%s;",
 						EntityManagers.CF_FLIGHT_SEGMENT, "originPort",
-						fromAirport, "destPort", toAirport));
+						fromAirport, "destPort", toAirport);
+		System.out.println(cql);
+		List<FlightSegmentImpl> flightSegments = entityManager.find(cql);
 
 		List<FlightImpl> result = new ArrayList<FlightImpl>();
 
 		for (FlightSegment flightSegment : flightSegments) {
 
-			List<FlightImpl> flights = flighEntityManager.find(String.format(
+			cql = String.format(
 					"SELECT * FROM %s WHERE %s=%s;", EntityManagers.CF_FLIGHT,
-					"flightSegmentId", flightSegment.getId()));
+					"flightSegmentId", flightSegment.getId());
+			System.out.println(cql);
+			List<FlightImpl> flights = flighEntityManager.find(cql);
 			for (FlightImpl flightImpl : flights) {
 				flightImpl.setFlightSegment(flightSegment);
 				result.add(flightImpl);

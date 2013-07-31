@@ -15,6 +15,7 @@
  *******************************************************************************/
 package com.acmeair.astyanax.entities;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -85,12 +86,12 @@ public class FlightImpl implements Flight {
 	}
 
 	@Override
-	public Date getScheduledDepartureDate() {
+	public Date getScheduledDepartureTime() {
 		return scheduledDepartureDate;
 	}
 
 	@Override
-	public void setScheduledDepartureDate(Date scheduledDepartureDate) {
+	public void setScheduledDepartureTime(Date scheduledDepartureDate) {
 		this.scheduledDepartureDate = scheduledDepartureDate;
 	}
 
@@ -165,7 +166,7 @@ public class FlightImpl implements Flight {
 	}
 
 	@Override
-	public String geFlightId() {
+	public String getFlightId() {
 		return id;
 	}
 
@@ -266,6 +267,11 @@ public class FlightImpl implements Flight {
 		} else if (!scheduledDepartureDate.equals(other.scheduledDepartureDate))
 			return false;
 		return true;
+	}
+
+	@Override
+	public Serializable getKey() {
+		return id;
 	}
 
 

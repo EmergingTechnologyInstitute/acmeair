@@ -15,18 +15,19 @@
  *******************************************************************************/
 package com.acmeair.entities;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
 public interface Flight {
 
-	String geFlightId();
+	String getFlightId();
 
 	String getFlightSegmentId();
 
-	Date getScheduledDepartureDate();
+	Date getScheduledDepartureTime();
 
-	void setScheduledDepartureDate(Date scheduledDepartureTime);
+	void setScheduledDepartureTime(Date scheduledDepartureTime);
 
 	Date getScheduledArrivalTime();
 
@@ -57,4 +58,6 @@ public interface Flight {
 	void setFlightSegment(FlightSegment flightSegment);
 
 	void setId(String id);	
+	
+	Serializable getKey();
 }

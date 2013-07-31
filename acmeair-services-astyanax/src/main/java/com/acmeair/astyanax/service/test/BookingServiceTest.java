@@ -20,7 +20,7 @@ public class BookingServiceTest {
 		List<FlightImpl> flights = service.getFlightByAirports("AKL", "JFK");
 		for (FlightImpl flightImpl : flights) {
 			System.out.println(bookingService.bookFlight("uid13@email.com",
-					flightImpl.geFlightId(), flightImpl.getFlightSegmentId()));
+					flightImpl.getFlightId(), flightImpl.getFlightSegmentId()));
 		}
 	}
 

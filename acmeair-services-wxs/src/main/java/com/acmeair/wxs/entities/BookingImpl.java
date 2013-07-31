@@ -40,7 +40,7 @@ public class BookingImpl implements Serializable, Booking {
 			FlightImpl flight) {
 		this.pkey = new BookingPartitionableKey(customer.getUsername(), id);
 		this._id = this.pkey;
-		this.flightKey = flight.getPkey();
+		this.flightKey = flight.getKey();
 		this.dateOfBooking = dateOfFlight;
 		this.customer = customer;
 		this.flight = flight;

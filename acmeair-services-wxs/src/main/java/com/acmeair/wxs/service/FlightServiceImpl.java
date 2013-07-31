@@ -263,7 +263,7 @@ public class FlightServiceImpl implements FlightService, FlightServiceLoader {
 					numFirstClassSeats, numEconomyClassSeats, airplaneTypeId);
 			Session session = sessionManager.getObjectGridSession();
 			ObjectMap flightMap = session.getMap(FLIGHT_MAP_NAME);
-			flightMap.insert(flight.getPkey(), flight);
+			flightMap.insert(flight.getKey(), flight);
 			return flight;
 		} catch (Exception e) {
 			throw new RuntimeException(e);

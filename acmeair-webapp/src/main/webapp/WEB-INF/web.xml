@@ -27,7 +27,7 @@
 		be specified for component-scanning -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>com.acmeair.web.config.WXSDirectAppConfig</param-value>
+		<param-value>com.acmeair.web.config.AstyanaxDirectAppConfig</param-value>
 	</context-param>
 
 	<filter>

@@ -48,27 +48,31 @@ public class ServiceLocator {
 
 	private ServiceLocator() {
 		String type = null;
-		String lookup = "contextConfigLocation";
+		String lookup = "com/acmeair/repository/type";
 		javax.naming.Context context = null;
 		javax.naming.Context envContext;
 		try {
 			context = new javax.naming.InitialContext();
 			envContext = (javax.naming.Context) context.lookup("java:comp/env");
 			if (envContext != null)
+			{
+				System.out.println("lookup:"+lookup);
 				type = (String) envContext.lookup(lookup);
+			}
 		} catch (NamingException e) {
-			e.printStackTrace();
+			System.out.println(e);
 		}
 
 		if (type != null) {
 			logger.info("Found repository in web.xml:" + type);
 		} else if (context != null) {
 			try {
+				System.out.println("lookup:"+lookup);
 				type = (String) context.lookup(lookup);
 				if (type != null)
 					logger.info("Found repository in server.xml:" + type);
 			} catch (NamingException e) {
-				// e.printStackTrace();
+				System.out.println(e);
 			}
 		}
 

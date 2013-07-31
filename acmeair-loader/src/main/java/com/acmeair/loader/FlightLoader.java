@@ -28,6 +28,8 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
 
+import com.acmeair.astyanax.entities.FlightImpl;
+import com.acmeair.astyanax.service.FlightServiceImpl;
 import com.acmeair.entities.AirportCodeMapping;
 import com.acmeair.entities.FlightSegment;
 import com.acmeair.service.FlightServiceLoader;
@@ -38,7 +40,7 @@ public class FlightLoader {
 	private static final int MAX_FLIGHTS_PER_SEGMENT = 30;
 	
 	@Resource
-	private FlightServiceLoader flightService;
+	private FlightServiceLoader flightService = new FlightServiceImpl();
 	
 	public void loadFlights() throws Exception {
 		InputStream csvInputStream = FlightLoader.class.getResourceAsStream("/mileage.csv");
@@ -102,6 +104,7 @@ public class FlightLoader {
 					c.add(Calendar.DATE, daysFromNow);
 					Date departureTime = c.getTime();
 					Date arrivalTime = getArrivalTime(departureTime, miles);
+					System.out.println(departureTime+" "+arrivalTime);
 					flightService.createNewFlight(flightId, departureTime, arrivalTime, new BigDecimal(500), new BigDecimal(200), 10, 200, "B747");
 					
 				}

@@ -74,7 +74,7 @@ public class BookingsREST {
 	@Path("/bybookingnumber/{userid}/{number}")
 	@Produces("application/json")
 	public Booking getBookingByNumber(@PathParam("number") String number,
-			@FormParam("userid") String userid) {
+			@PathParam("userid") String userid) {
 		try {
 			Booking b = bs.getBooking(userid, number);
 			return b;

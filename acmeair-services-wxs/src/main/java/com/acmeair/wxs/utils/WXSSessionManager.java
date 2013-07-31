@@ -210,6 +210,7 @@ public class WXSSessionManager implements InitializingBean, TransactionService{
 		
 		@Override
 		public void afterPropertiesSet() throws ObjectGridException {
+			log.debug("afterPropertiesSet being called");
 			if (!integrateWithWASTransactions && txManager!=null) // Using Spring TX if WAS TX is not enabled
 			{
 				log.info("Session will be created from SpringLocalTxManager w/ tx support.");
@@ -218,7 +219,13 @@ public class WXSSessionManager implements InitializingBean, TransactionService{
 				txManager=null;
 				log.info("Session will be created from ObjectGrid directly w/o tx support.");
 			}
+			try {
 			prepareForTransaction(); 
+		}
+			catch (Exception e) {
+				log.error("***** error creating WXSSessionManager, errors will likely occur upon use");
+				log.error(e);
+			}
 		}
 		
 		// This method needs to be called by the client from its thread before triggering a service with @Transactional annotation

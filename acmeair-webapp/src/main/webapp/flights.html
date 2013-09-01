@@ -259,8 +259,7 @@
 			alert("please select an outbound flight");
 			return;
 		}
-		var grid = dijit.byId("gridOutbound");
-		var toFlightKey = grid.store.getValue(grid.getItem(selectedIndexForToFlights), "key");
+		var grid = dijit.byId("gridOutbound");		
 		var toFlightId = grid.store.getValue(grid.getItem(selectedIndexForToFlights), "flightId");
 		var toFlightSegId = grid.store.getValue(grid.getItem(selectedIndexForToFlights), "flightSegmentId");
 		
@@ -273,9 +272,8 @@
 				return;
 			}
 			var grid = dijit.byId("gridReturn");
-			var retFlightKey = grid.store.getValue(grid.getItem(selectedIndexForRetFlights), "key");
-			retFlightId = grid.store.getValue(retFlightKey, "id");
-			retFlightSegId = grid.store.getValue(retFlightKey, "flightSegmentId");
+			retFlightId = grid.store.getValue(grid.getItem(selectedIndexForRetFlights), "flightId");
+			retFlightSegId = grid.store.getValue(grid.getItem(selectedIndexForRetFlights), "flightSegmentId");
 		}
 		
 		var xhrContent = { userid : loggedinuser }

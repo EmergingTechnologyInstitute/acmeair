@@ -94,7 +94,7 @@ public class ServiceLocator {
 		logger.info("Type is:"+type);
 
 		if (type == null) {
-			type = "wxs";
+			type = "astyanax";
 		} 
 		
 		if (type.equals("astyanax")) {
@@ -103,15 +103,9 @@ public class ServiceLocator {
 			} catch (ClassNotFoundException e) {		
 				clazz = null;
 			}
-		} else if (type.equals("wxs")) {
+		}  else {
 			try {
-				clazz = Class.forName("com.acmeair.web.config.WXSDirectAppConfig");
-			} catch (ClassNotFoundException e) {
-				clazz = null;
-			}
-		} else {
-			try {
-				clazz = Class.forName("com.acmeair.web.config.WXSDirectAppConfig");
+				clazz = Class.forName("com.acmeair.web.config.AstyanaxDirectAppConfig");
 			} catch (ClassNotFoundException e) {
 				clazz = null;
 			}			

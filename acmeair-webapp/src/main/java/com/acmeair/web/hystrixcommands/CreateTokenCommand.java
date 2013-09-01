@@ -25,12 +25,14 @@ import com.netflix.niws.client.http.HttpClientRequest.Verb;
 import com.netflix.niws.client.http.HttpClientResponse;
 import com.netflix.niws.client.http.RestClient;
 import com.netflix.client.ClientFactory;
+import com.netflix.config.ConfigurationManager;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.google.common.base.Charsets;
+import com.acmeair.astyanax.entities.CustomerSessionImpl;
 import com.acmeair.entities.*;
 
 import org.codehaus.jackson.map.*;
@@ -52,7 +54,11 @@ public class CreateTokenCommand extends HystrixCommand<CustomerSession> {
 	@Override
 	protected CustomerSession run() throws Exception {
 		String responseString = null;
-		try {
+		try {			
+			
+			ConfigurationManager.loadPropertiesFromResources("acmeair-webapp.properties");  // 1
+		      System.out.println(ConfigurationManager.getConfigInstance().getProperty("acmeair-webapp.ribbon.listOfServers"));
+			
 			RestClient client = (RestClient) ClientFactory.getNamedClient(CommandConstants.ACME_AIR_AUTH_SERVICE_NAMED_CLIENT);
 	
 			HttpClientRequest request = HttpClientRequest.newBuilder().setVerb(Verb.POST).setUri(new URI(CommandConstants.ACME_AIR_AUTH_SERVICE_CONTEXT_AND_REST_PATH + "/authtoken/byuserid/" + userid)).build();
@@ -61,7 +67,7 @@ public class CreateTokenCommand extends HystrixCommand<CustomerSession> {
 			responseString = IOUtils.toString(response.getRawEntity(), Charsets.UTF_8);
 			log.debug("responseString = " + responseString);
 			ObjectMapper mapper = new ObjectMapper();
-			CustomerSession cs = mapper.readValue(responseString, CustomerSession.class);
+			CustomerSession cs = mapper.readValue(responseString, CustomerSessionImpl.class);
 			return cs;
 		}
 		catch (Throwable t) {
@@ -85,7 +91,7 @@ public class CreateTokenCommand extends HystrixCommand<CustomerSession> {
 			e.printStackTrace(pw);
 			log.error(sw.toString());
 		}
-		return new CustomerSession();
+		return new CustomerSessionImpl();
 	}
 
 }

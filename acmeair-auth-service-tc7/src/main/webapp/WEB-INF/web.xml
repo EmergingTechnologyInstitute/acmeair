@@ -8,28 +8,6 @@
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 
-	<!-- Configure ContextLoaderListener to use AnnotationConfigWebApplicationContext 
-		instead of the default XmlWebApplicationContext -->
-	<context-param>
-		<param-name>contextClass</param-name>
-		<param-value>
-          org.springframework.web.context.support.AnnotationConfigWebApplicationContext
-      </param-value>
-	</context-param>
-
-	<!-- Configuration locations must consist of one or more comma- or space-delimited 
-		fully-qualified @Configuration classes. Fully-qualified packages may also 
-		be specified for component-scanning -->
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>com.acmeair.services.authService.WXSDirectAppConfig</param-value>
-	</context-param>
-
-	<!-- Bootstrap the root application context as usual using ContextLoaderListener -->
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
-
 	<servlet>
   		<servlet-name>jersey-servlet</servlet-name>
   		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
@@ -49,9 +27,9 @@
 		<url-pattern>/rest/api/*</url-pattern>
 	</servlet-mapping>
 	
-    <listener>
+    <!-- <listener>
         <listener-class>com.netflix.karyon.server.guice.KaryonGuiceContextListener</listener-class>
-    </listener>
+    </listener> -->
     
     <filter>
         <filter-name>guiceFilter</filter-name>

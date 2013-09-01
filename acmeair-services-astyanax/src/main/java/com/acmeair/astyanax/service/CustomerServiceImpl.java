@@ -41,7 +41,7 @@ public class CustomerServiceImpl implements CustomerService, CustomerServiceLoad
 	private static final int DAYS_TO_ALLOW_SESSION = 1;
 
 	@Resource
-	KeyGenerator keyGenerator;
+	KeyGenerator keyGenerator = new DefaultKeyGeneratorImpl();
 
 	@Override
 	public Customer createCustomer(String username, String password,

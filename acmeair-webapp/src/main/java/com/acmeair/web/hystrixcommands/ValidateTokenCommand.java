@@ -24,9 +24,11 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.codehaus.jackson.map.ObjectMapper;
 
+import com.acmeair.astyanax.entities.CustomerSessionImpl;
 import com.acmeair.entities.CustomerSession;
 import com.google.common.base.Charsets;
 import com.netflix.client.ClientFactory;
+import com.netflix.config.ConfigurationManager;
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.HystrixThreadPoolKey;
@@ -54,6 +56,10 @@ public class ValidateTokenCommand extends HystrixCommand<CustomerSession> {
 	protected CustomerSession run() throws Exception {
 		String responseString = null;
 		try {
+			
+			ConfigurationManager.loadPropertiesFromResources("acmeair-webapp.properties");  // 1
+		      System.out.println(ConfigurationManager.getConfigInstance().getProperty("sample-client.ribbon.listOfServers"));
+			
 			RestClient client = (RestClient) ClientFactory.getNamedClient(CommandConstants.ACME_AIR_AUTH_SERVICE_NAMED_CLIENT);
 	
 			HttpClientRequest request = HttpClientRequest.newBuilder().setVerb(Verb.GET).setUri(new URI(CommandConstants.ACME_AIR_AUTH_SERVICE_CONTEXT_AND_REST_PATH + "/authtoken/" + tokenid)).build();
@@ -62,7 +68,7 @@ public class ValidateTokenCommand extends HystrixCommand<CustomerSession> {
 			responseString = IOUtils.toString(response.getRawEntity(), Charsets.UTF_8);
 			log.debug("responseString = " + responseString);
 			ObjectMapper mapper = new ObjectMapper();
-			CustomerSession cs = mapper.readValue(responseString, CustomerSession.class);
+			CustomerSession cs = mapper.readValue(responseString, CustomerSessionImpl.class);
 			return cs;
 		}
 		catch (Throwable t) {
@@ -86,6 +92,6 @@ public class ValidateTokenCommand extends HystrixCommand<CustomerSession> {
 			e.printStackTrace(pw);
 			log.error(sw.toString());
 		}
-		return new CustomerSession();
+		return new CustomerSessionImpl();
 	}
 }

@@ -25,6 +25,7 @@ import org.springframework.stereotype.Service;
 import com.acmeair.astyanax.entities.BookingImpl;
 import com.acmeair.astyanax.entities.EntityManagers;
 import com.acmeair.astyanax.entities.FlightImpl;
+import com.acmeair.entities.Booking;
 import com.acmeair.entities.Customer;
 import com.acmeair.service.BookingService;
 import com.acmeair.service.KeyGenerator;
@@ -84,7 +85,7 @@ public class BookingServiceImpl implements BookingService {
 	}	
 	
 	@Override
-	public List<BookingImpl> getBookingsByUser(String user) {
+	public List<? extends Booking> getBookingsByUser(String user) {
 		try{			
 			EntityManager<BookingImpl, String> entityManager = EntityManagers.getBookingEntityManager();
 			String sql = String.format(

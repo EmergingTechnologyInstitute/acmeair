@@ -21,6 +21,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import com.acmeair.astyanax.service.CustomerServiceImpl;
 import com.acmeair.entities.Booking;
 import com.acmeair.entities.Customer;
 import com.acmeair.entities.Flight;
@@ -38,13 +39,12 @@ public class BookingImpl implements Booking {
 	private Date dateOfBooking;
 
 	@Column
-	private Customer customer;
-
-	@Column
 	private FlightImpl flight;
 
 	@Column(name = "userid")
 	private String customerId;
+	
+	private transient Customer customer;
 
 	public BookingImpl() {
 	}
@@ -54,17 +54,15 @@ public class BookingImpl implements Booking {
 
 		this.id = id;
 		this.flightKey = flight.getFlightId();
-		this.dateOfBooking = dateOfFlight;
-		this.customer = customer;
+		this.dateOfBooking = dateOfFlight;		
 		this.flight = flight;
-		this.customerId = customer.getUsername();
+		this.customerId = customer.getUsername();		
 	}
 
 	@Override
 	public String toString() {
 		return "BookingImpl [id=" + id + ", flightKey=" + flightKey
-				+ ", dateOfBooking=" + dateOfBooking + ", customer=" + customer
-				+ ", flight=" + flight + ", customerId=" + customerId + "]";
+				+ ", dateOfBooking=" + dateOfBooking + ", flight=" + flight + ", customerId=" + customerId + "]";
 	}
 
 	@Override
@@ -111,6 +109,10 @@ public class BookingImpl implements Booking {
 	 */
 	@Override
 	public Customer getCustomer() {
+		if (customer == null) {
+			CustomerServiceImpl csi = new CustomerServiceImpl();
+			customer = csi.getCustomerByUsername(customerId);
+		}
 		return customer;
 	}
 
@@ -129,7 +131,7 @@ public class BookingImpl implements Booking {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((customer == null) ? 0 : customer.hashCode());
+				+ ((customerId == null) ? 0 : customerId.hashCode());
 		result = prime * result
 				+ ((dateOfBooking == null) ? 0 : dateOfBooking.hashCode());
 		result = prime * result + ((flight == null) ? 0 : flight.hashCode());
@@ -148,10 +150,10 @@ public class BookingImpl implements Booking {
 		if (getClass() != obj.getClass())
 			return false;
 		BookingImpl other = (BookingImpl) obj;
-		if (customer == null) {
-			if (other.customer != null)
+		if (customerId == null) {
+			if (other.customerId != null)
 				return false;
-		} else if (!customer.equals(other.customer))
+		} else if (!customerId.equals(other.customerId))
 			return false;
 		if (dateOfBooking == null) {
 			if (other.dateOfBooking != null)
@@ -176,4 +178,5 @@ public class BookingImpl implements Booking {
 		return true;
 	}
 
+	
 }

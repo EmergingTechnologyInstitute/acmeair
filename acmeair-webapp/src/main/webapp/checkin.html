@@ -143,11 +143,10 @@
 					alert("please select a flight");
 					return;
 				}
-				var grid = dijit.byId("gridFlights");
-				var bookingPK = grid.store.getValue(grid.getItem(selectedIndexForFlights), "key");	
+				var grid = dijit.byId("gridFlights");					
 				var xhrContent = { userid : loggedinuser }
-				xhrContent.number = bookingPK.id;
-				xhrContent.userid = bookingPK.customerId;
+				xhrContent.number = grid.store.getValue(grid.getItem(selectedIndexForFlights), "id");
+				xhrContent.userid = grid.store.getValue(grid.getItem(selectedIndexForFlights), "customerId");
 				dojo.xhrPost({
 					content : xhrContent,
 					url : 'rest/api/bookings/cancelbooking',

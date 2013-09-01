@@ -16,41 +16,38 @@
 package com.acmeair.services.authService;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.*;
-import javax.ws.rs.core.*;
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.Response;
 
 import org.springframework.stereotype.Component;
 
-import com.acmeair.entities.*;
-import com.acmeair.service.*;
-import com.acmeair.wxs.utils.TransactionService;
-
-import javax.ws.rs.core.Context;
+import com.acmeair.astyanax.service.CustomerServiceImpl;
+import com.acmeair.entities.CustomerSession;
+import com.acmeair.service.CustomerService;
+import com.acmeair.service.TransactionService;
 
 @Path("/authtoken")
 @Component
 public class AuthTokenREST {
 	
-	private CustomerService customerService = ServiceLocator.getService(CustomerService.class);
+	private CustomerService customerService = new CustomerServiceImpl();
 	
 	@Context 
 	private HttpServletRequest request;
 	private TransactionService transactionService = null; 
 	private boolean initializedTXService = false;
-	
-	private TransactionService getTxService() {
-		if (!this.initializedTXService) {
-			this.initializedTXService = true;
-			transactionService = ServiceLocator.getService(TransactionService.class);
-		}
-		return transactionService;
-	}
 
 	@POST
 	@Path("/byuserid/{userid}")
 	@Produces("application/json")
-	public /* CustomerSession */ Response createToken(@PathParam("userid") String userid) {
-		setupTransaction();
+	public /* CustomerSession */ Response createToken(@PathParam("userid") String userid) {		
 		CustomerSession cs = customerService.createSession(userid);
 		return Response.ok(cs).build();
 	}
@@ -58,8 +55,7 @@ public class AuthTokenREST {
 	@GET
 	@Path("{tokenid}")
 	@Produces("application/json")
-	public Response validateToken(@PathParam("tokenid") String tokenid) {
-		setupTransaction();
+	public Response validateToken(@PathParam("tokenid") String tokenid) {		
 		CustomerSession cs = customerService.validateSession(tokenid);
 		if (cs == null) {
 			throw new WebApplicationException(404);
@@ -72,22 +68,9 @@ public class AuthTokenREST {
 	@DELETE
 	@Path("{tokenid}")
 	@Produces("application/json")
-	public Response invalidateToken(@PathParam("tokenid") String tokenid) {
-		setupTransaction();
+	public Response invalidateToken(@PathParam("tokenid") String tokenid) {		
 		customerService.invalidateSession(tokenid);
 		return Response.ok().build();
 	}
 	
-	private void setupTransaction() {
-		// The following code is to ensure that OG is always set on the thread
-		try {
-			TransactionService txService = getTxService();
-			if (txService != null) {
-				txService.prepareForTransaction();
-			}
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 }

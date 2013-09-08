@@ -54,10 +54,7 @@ public class CreateTokenCommand extends HystrixCommand<CustomerSession> {
 	@Override
 	protected CustomerSession run() throws Exception {
 		String responseString = null;
-		try {			
-			
-			ConfigurationManager.loadPropertiesFromResources("acmeair-webapp.properties");  // 1
-		      System.out.println(ConfigurationManager.getConfigInstance().getProperty("acmeair-webapp.ribbon.listOfServers"));
+		try {					    
 			
 			RestClient client = (RestClient) ClientFactory.getNamedClient(CommandConstants.ACME_AIR_AUTH_SERVICE_NAMED_CLIENT);
 	

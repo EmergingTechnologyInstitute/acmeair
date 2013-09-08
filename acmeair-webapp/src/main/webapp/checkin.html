@@ -145,8 +145,8 @@
 				}
 				var grid = dijit.byId("gridFlights");					
 				var xhrContent = { userid : loggedinuser }
-				xhrContent.number = grid.store.getValue(grid.getItem(selectedIndexForFlights), "id");
-				xhrContent.userid = grid.store.getValue(grid.getItem(selectedIndexForFlights), "customerId");
+				xhrContent.number = grid.store.getValue(grid.getItem(selectedIndexForFlights), "bookingId");
+				xhrContent.userid = grid.store.getValue(grid.getItem(selectedIndexForFlights), "customer").username;
 				dojo.xhrPost({
 					content : xhrContent,
 					url : 'rest/api/bookings/cancelbooking',

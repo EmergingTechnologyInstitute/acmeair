@@ -90,8 +90,7 @@ public class BookingServiceImpl implements BookingService {
 			EntityManager<BookingImpl, String> entityManager = EntityManagers.getBookingEntityManager();
 			String sql = String.format(
 					"SELECT * FROM %s WHERE %s='%s';", EntityManagers.CF_BOOKING,
-					"userid", user);
-			System.err.println(sql);
+					"userid", user);			
 			List<BookingImpl> flights = entityManager.find(sql);					
 			return flights;
 		}catch (Exception e)

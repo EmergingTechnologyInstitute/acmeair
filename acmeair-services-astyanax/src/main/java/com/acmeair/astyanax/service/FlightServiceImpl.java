@@ -111,7 +111,7 @@ public class FlightServiceImpl implements FlightService, FlightServiceLoader {
 				.format("SELECT * FROM %s WHERE %s=%s AND %s=%s;",
 						EntityManagers.CF_FLIGHT_SEGMENT, "originPort",
 						fromAirport, "destPort", toAirport);
-		System.out.println(cql);
+		//System.out.println(cql);
 		List<FlightSegmentImpl> flightSegments = entityManager.find(cql);
 
 		List<FlightImpl> result = new ArrayList<FlightImpl>();
@@ -121,7 +121,7 @@ public class FlightServiceImpl implements FlightService, FlightServiceLoader {
 			cql = String.format(
 					"SELECT * FROM %s WHERE %s=%s;", EntityManagers.CF_FLIGHT,
 					"flightSegmentId", flightSegment.getId());
-			System.out.println(cql);
+			//System.out.println(cql);
 			List<FlightImpl> flights = flighEntityManager.find(cql);
 			for (FlightImpl flightImpl : flights) {
 				flightImpl.setFlightSegment(flightSegment);

@@ -2,7 +2,7 @@ CREATE KEYSPACE acmeair WITH
 placement_strategy = 'SimpleStrategy'
 AND strategy_options = {replication_factor:2};
 
-DROP COLUMN FAMILY flightservice;
+USE acmeair;
 
 CREATE COLUMN FAMILY flight_segment
 WITH comparator = UTF8Type

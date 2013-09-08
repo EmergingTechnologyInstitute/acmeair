@@ -59,9 +59,9 @@
 		<url-pattern>/rest/api/*</url-pattern>
 	</servlet-mapping>
 	
-    <!--  <listener>
+    <listener>
         <listener-class>com.netflix.karyon.server.guice.KaryonGuiceContextListener</listener-class>
-    </listener> -->
+    </listener>
     
     <filter>
         <filter-name>guiceFilter</filter-name>

@@ -13,15 +13,34 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 *******************************************************************************/
-package com.acmeair.web;
+package com.acmeair.services.authService;
 
-import com.netflix.karyon.spi.HealthCheckHandler;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
 
-public class WebAppHealthCheckHandler implements HealthCheckHandler {
+import com.acmeair.astyanax.service.AstyanaxContextHelper;
+import com.netflix.astyanax.Keyspace;
+
+public class DataHelper implements ServletContextListener {
 
 	@Override
-	public int getStatus() {
-		// TODO:  AWS - Understand if this is being called
-		return 200;
+	public void contextDestroyed(ServletContextEvent arg0) {
+		// Do Nothing
+
 	}
+
+	@Override
+	public void contextInitialized(ServletContextEvent arg0) {
+	
+		//Force connection to datasource, before first request 
+		
+		System.out.println(" Getting Keyspace!!!!!");
+	
+		AstyanaxContextHelper ach = new AstyanaxContextHelper();
+		Keyspace keyspace = ach.getKeyspace();
+		
+		System.out.println(" Got keyspace "+keyspace);
+
+	}
+
 }

@@ -47,9 +47,12 @@ public class AuthTokenREST {
 	@POST
 	@Path("/byuserid/{userid}")
 	@Produces("application/json")
-	public /* CustomerSession */ Response createToken(@PathParam("userid") String userid) {		
+	public /* CustomerSession */ Response createToken(@PathParam("userid") String userid) {
+		long start = System.currentTimeMillis();
 		CustomerSession cs = customerService.createSession(userid);
-		return Response.ok(cs).build();
+		Response result =Response.ok(cs).build();
+		System.out.println("Time taken:"+(System.currentTimeMillis()-start)+"ms");
+		return result;
 	}
 	
 	@GET

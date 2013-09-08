@@ -135,7 +135,7 @@ var airportCodes = [
 	{ airportName : "Tehran", id : "IKA" },
 	{ airportName : "Tokyo", id : "NRT" },
 	{ airportName : "Amsterdam", id : "AMS" },
-	{ airportName : "Aukland", id : "AKL" },
+	{ airportName : "Auckland", id : "AKL" },
 	{ airportName : "Bangkok", id : "BKK" }
 ];
 

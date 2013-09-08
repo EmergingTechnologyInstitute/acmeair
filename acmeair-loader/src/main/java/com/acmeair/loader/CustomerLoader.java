@@ -19,6 +19,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
 
+import com.acmeair.astyanax.service.CustomerServiceImpl;
 import com.acmeair.entities.CustomerAddress;
 import com.acmeair.entities.impl.MemberShipStatus;
 import com.acmeair.entities.impl.PhoneType;
@@ -28,7 +29,7 @@ import com.acmeair.service.CustomerServiceLoader;
 public class CustomerLoader {
 
 	@Resource
-	private CustomerServiceLoader customerService;
+	private CustomerServiceLoader customerService = new CustomerServiceImpl();
 
 	public void loadCustomers(long numCustomers) {
 		CustomerAddress address = new CustomerAddress("123 Main St.", null, "Anytown", "NC", "USA", "27617");

@@ -46,7 +46,7 @@ public class AstyanaxContextHelper {
 				.get();
 		
 		LOG.info(String.format("Connection to cassandra %s:%d with %d max connections", host,port,maxConns));
-
+		System.out.println(String.format("Connection to cassandra %s:%d with %d max connections", host,port,maxConns));
 		context = new AstyanaxContext.Builder()
 				.forCluster("ClusterName")
 				.forKeyspace("acmeair")
